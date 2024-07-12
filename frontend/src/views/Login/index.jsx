@@ -57,9 +57,9 @@ import {
                       <span className="mx-2 text-gray-500">O</span>
                       <Separator orientation="horizontal" size="4" />
                     </div>
-                    <Button className="mt-4 w-full bg-white text-blue-500 border border-blue-500 py-4 rounded-md outline-none ring-2 ring-offset-2">
+                    <button className="btn-google">
                       <FcGoogle /> Ingresar con Google
-                    </Button>
+                    </button>
                   </Flex>
                 </form>
               </Card>
