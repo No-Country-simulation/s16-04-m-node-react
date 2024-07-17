@@ -18,7 +18,7 @@ const PortalDeAcceso = () => {
                         sideOffset={5}
                         alignOffset={-3}
                     >
-                        <Menubar.Item className="group text-[13px] leading-none text-violet11 rounded flex items-center h-[25px] px-[10px] relative select-none outline-none data-[state=open]:bg-violet4 data-[state=open]:text-violet11 data-[highlighted]:bg-gradient-to-br data-[highlighted]:from-violet9 data-[highlighted]:to-violet10 data-[highlighted]:text-violet1 data-[highlighted]:data-[state=open]:text-violet1 data-[disabled]:text-mauve8 cursor-pointer">
+                        <Menubar.Item className="group text-[13px] leading-none text-black rounded flex items-center h-[25px] px-[10px] relative select-none outline-none data-[state=open]:bg-violet4 data-[state=open]:text-slate data-[highlighted]:bg-gradient-to-br data-[highlighted]:from-slate cursor-pointer">
                             Acceso Pacientes{' '}
                             <div className="ml-auto pl-5 text-mauve9 group-data-[highlighted]:text-white group-data-[disabled]:text-mauve8">
                             </div>
