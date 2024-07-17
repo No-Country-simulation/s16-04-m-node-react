@@ -34,6 +34,7 @@ import { Toaster } from "sonner";
             style={{ maxWidth: '12rem', maxHeight: '12rem' }} 
           />
         </div>
+        
         <div className="flex-1 flex items-center justify-center">
           <Container size="2" className="login-container">
             <Flex direction="column" gap="2" className="max-w-md mx-auto">

@@ -8,13 +8,14 @@ import userReducer from './slice/userSlice'
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['users' , 'appearance']
+  blacklist: ['users' ]
 };
 
 
 const rootReducer = combineReducers({
     user: userReducer,
-    appearance: appearanceReducer
+    appearance: appearanceReducer,
+
 });
 
 
