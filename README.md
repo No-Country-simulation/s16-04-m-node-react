@@ -28,13 +28,13 @@ El objetivo principal de CHealth es proporcionar una plataforma web que ofrezca 
 - **Sofia Soto**: Frontend  
   **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/sofia-soto-bb3b051bb/)
   
-- **Alessandro Brizuela**:   
+- **Alessandro Brizuela**: Frontend   
   **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/alessandro-brizuela-364a91272/)
   
 - **German Pinto**: Frontend  
   **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/german-pintodev/)
 
-- **Luz F**: Frontend  
+- **Luz Frere**: Frontend  
   **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/luzfrere)
   
 - **Javier Ruiz**: Frontend  
