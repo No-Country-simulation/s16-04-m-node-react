@@ -1,9 +1,11 @@
 import '@radix-ui/themes/styles.css';
 import { Flex, Text, Box, Container } from '@radix-ui/themes';
 import '../../css/Hero.css';
+import NavBar from "../../components/NavBar"
 
 const Hero = () => (
     < >
+    <NavBar/>
         <Container className="bg-image w-[100vw] h-[100vh] overflow-hidden">           
                 <Flex direction="column" gap="4" >
                     <Box className='relative top-[5em]' width="50vw" height="20vh">
