@@ -1,55 +1,53 @@
-import { Flex } from "@radix-ui/themes";
-import "../css/navbar.css";
-import * as Avatar from "@radix-ui/react-avatar";
-import Logo from "./Logo";
-import Menunavbar from "./Menunavbar";
-import { FiBell } from "react-icons/fi";
-import { LuMoon } from "react-icons/lu";
-import { useDispatch } from "react-redux";
-import { toggleTheme } from "../store/slice/appearanceSlice";
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import Logo from "../assets/CHEALTH.png";
+import { Box, Flex, Button } from '@radix-ui/themes';
 
-const Navbar = () => {
 
-  const dispatch = useDispatch()
 
-  const handletheme = ()=>{
-      dispatch(toggleTheme())
-  }
-
-  return (
+const Navbar = () => (
     <>
-      <Flex
-        justify="between"
-        align="center"
-        style={{ height: "100%", width: "100%", padding: "0 1rem"}}
-      >
-        <Logo />
-        <Flex
-        justify="center"
-        align="center"
-        gap='15px'
-        style={{ height: "100%", padding: "0 1rem"}}
-      >
-        <LuMoon
-        onClick={handletheme}
-        />
-       <FiBell />
-        <Avatar.Root className="AvatarRoot">
-          <Avatar.Image
-            className="AvatarImage"
-            src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
-            alt="Colm Tuite"
-          />
-          <Avatar.Fallback className="AvatarFallback" delayMs={600}>
-            CT
-          </Avatar.Fallback>
-        </Avatar.Root>
-        <Menunavbar/>
-      </Flex>
-        
-      </Flex>
+        <Flex direction={'row'} justify={'around'} gap={'9'} >
+            <Box className="w-1/5 h-0 relative left-20 top-20 z-[5] flex items-center">
+                <a href="#">
+                    <img
+                        src={Logo}
+                        className="w-24"
+                    />
+                </a>
+            </Box>
+            <NavigationMenu.Root className="relative top-5 z-[1] flex h-0 justify-between ml-20">
+                <NavigationMenu.List className="m-5 flex list-none text-slate-800 rounded-[6px] bg-blue-300 p-1 shadow-lg">
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Link className="group flex select-none items-center 
+                    justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
+                    leading-none outline-none hover:text-cyan-700 cursor-pointer" >Servicios</NavigationMenu.Link>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Link className="group flex select-none items-center 
+                    justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
+                    leading-none outline-none hover:text-cyan-700 cursor-pointer" >Especialidades</NavigationMenu.Link>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Link className="group flex select-none items-center 
+                    justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
+                    leading-none outline-none hover:text-cyan-700 cursor-pointer" >Nuestro Blog</NavigationMenu.Link>
+                    </NavigationMenu.Item>
+
+                    <NavigationMenu.Item>
+                        <NavigationMenu.Link className="group flex select-none items-center 
+                    justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
+                    leading-none outline-none hover:text-cyan-700 cursor-pointer">Testimonios</NavigationMenu.Link>
+                    </NavigationMenu.Item>
+                </NavigationMenu.List>
+
+            </NavigationMenu.Root>
+        </Flex>
+        <Flex className="relative justify-end end-40 top-10 z-[1] h-0">
+            <Button className='h-10 bg-cyan-500 border-cyan-700 border-2 hover:bg-cyan-700 hover:border-spacing-1 hover:border-2 hover:border-cyan-900 rounded-md shadow-lg shadow-slate-900 leading-none font-medium cursor-pointer'>Portal de Acceso</Button>
+        </Flex>
     </>
-  );
-};
+);
 
 export default Navbar;

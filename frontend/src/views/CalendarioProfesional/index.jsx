@@ -3,7 +3,7 @@ import { Blockquote, Box, Text, TextField, Flex } from '@radix-ui/themes';
 import CalendarioDatePicker from "./CalendarioDatePicker";
 import CalendarioBigCalendar from "./CalendarioBigCalendar";
 import { BsArrowLeftCircle } from "react-icons/bs";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/NavBar";
 
 
 const CalendarioProfesional = () => {

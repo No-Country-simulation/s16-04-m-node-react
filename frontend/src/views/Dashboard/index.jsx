@@ -1,5 +1,5 @@
 import {  Grid, Separator } from "@radix-ui/themes"
-import Navbar from "../../components/Navbar"
+import Navbar from "../../components/NavBar"
 
 
 
