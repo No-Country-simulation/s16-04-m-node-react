@@ -1,7 +1,9 @@
+
 import { Flex, Grid, Separator } from "@radix-ui/themes";
 import SliderMenu from "../../components/SliderMenu";
 import { Outlet } from 'react-router-dom';
 import Navbardash from "../../components/Navbardash";
+
 
 const Dashboard = () => {
   return (
