@@ -1,10 +1,12 @@
 import '@radix-ui/themes/styles.css';
-import { Flex, Text, Box, Container, Heading } from '@radix-ui/themes';
+import { Flex, Text, Inset, Separator, Box, Container, Heading } from '@radix-ui/themes';
 import '../../css/Hero.css';
-import NavBar from "../../components/Navbar";
+import NavBar from "../../components/NavBar";
 import { CalendarIcon, LaptopIcon, Pencil2Icon, CheckCircledIcon } from '@radix-ui/react-icons';
 import doctorAvatar from "../../assets/3d-happy-cartoon-doctor.png";
-
+import imagen9 from "../../assets/image9.png";
+import imagen10 from "../../assets/image10.png";
+import imagen11 from "../../assets/image11.png";
 const Hero = () => (
     < >
         <NavBar />
@@ -22,7 +24,7 @@ const Hero = () => (
             <Heading className='text-center font-semibold text-4xl mb-20 pb-5' >Servicios</Heading>
             <Flex className='justify-between'>
                 <Box className='relative top-14 size-72'>
-                    <LaptopIcon className='relative -top-9 size-7'/>
+                    <LaptopIcon className='relative -top-9 size-7' />
                     <Heading className='w-72 text-cyan-100 pb-7'>
                         Reserva de Citas
                     </Heading>
@@ -87,11 +89,67 @@ const Hero = () => (
                 </Box>
             </Flex>
         </Container>
-        <Container>
+        <Container height={'100vh'}>
             <Heading className='text-center font-semibold text-3xl pt-24 mb-20 pb-5'>Contenidos para tu bienestar</Heading>
-            <Flex>
-                
-                
+            <Flex direction={'row'} gapX={'7'}>
+                <Box className='flex-column' maxWidth={'30%'}>
+                    <Inset clip="padding-box" side="top" pb="current">
+                        <img
+                            src={imagen11}
+                            alt="Bold typography"
+                            style={{
+                                display: 'block',
+                                objectFit: 'cover',
+                                width: '100%',
+                                height: 140,
+                                backgroundColor: 'var(--gray-5)',
+                            }}
+                        />
+                    </Inset>
+                    <Text as="p" size="3">
+                        Lava bien tus manos para prevenir enfermedades La higiene es vital para evitar que se propaguen los virus y es importante asumirla como una conducta social, cívica y de salud pública pues es una forma de protegernos entre todos”. Así lo explica César Augusto López, médico epidemiólogo de SURA, con quien hablamos para compartirte algunas medidas de prevención de enfermedades.
+                    </Text>
+                </Box>
+                <Flex align="center" gap="4" height="initial">
+                    <Separator orientation="vertical" size="4" />
+                </Flex>
+                <Box className='flex-column' maxWidth={'30%'}>
+                    <Inset clip="padding-box" side="top" pb="current">
+                        <img
+                            src={imagen10}
+                            style={{
+                                display: 'block',
+                                objectFit: 'cover',
+                                width: '100%',
+                                height: 140,
+                                backgroundColor: 'var(--gray-5)',
+                            }}
+                        />
+                    </Inset>
+                    <Text as="p" size="3">
+                        Depresión posparto La melancolía posparto no es igual a la depresión, esto es algo que trasciende ese estado. Si quieres saber cómo detectarla o cómo apoyar a las madres que la padecen, escucha este episodio en el que las especialistas nos dan sus recomendaciones.
+                    </Text>
+                </Box>
+                <Flex align="center" gap="4" height="initial">
+                    <Separator orientation="vertical" size="4" />
+                </Flex>
+                <Box className='flex-column' maxWidth={'30%'}>
+                    <Inset clip="padding-box" side="top" pb="current">
+                        <img
+                            src={imagen9}
+                            style={{
+                                display: 'block',
+                                objectFit: 'cover',
+                                width: '100%',
+                                height: 140,
+                                backgroundColor: 'var(--gray-5)',
+                            }}
+                        />
+                    </Inset>
+                    <Text as="p" size="3">
+                        Menopausia y su impacto en el corazón La transición a la menopausia se asocia con un aumento del riesgo de enfermedad cardiovascular, relacionado fundamentalmente por una alteración del metabolismo de los lípidos y la glucosa, así como a la redistribución de la grasa corporal en las pacientes y esto va aumentando a medida que la edad se incrementa.
+                    </Text>
+                </Box>
             </Flex>
         </Container>
     </>
