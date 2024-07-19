@@ -7,9 +7,9 @@ const SliderMenu = () => {
   return (
     <>
         <Flex
-        direction="column" // Configura el Flex en dirección de columna
-        gap="2rem" // Configura el gap entre los elementos
-        style={{ minHeight: "calc(100vh - 64px)", width: "250px", backgroundColor: '#0096c7', padding: '1rem' }}
+        direction="column" 
+        gap="2rem" 
+        style={{ minHeight: "calc(100vh - 64px)", width: "250px", backgroundColor: '#57CED4', padding: '1rem',fontWeight:'500' }}
       >
 
         <Flex
