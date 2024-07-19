@@ -1,16 +1,20 @@
+
 import './App.css'
-import Hero from './views/Hero/Hero.jsx'
+import CalendarioProfesional from './views/CalendarioProfesional'
+import Dashboard from './views/Dashboard'
 import Login from './views/Login'
 import { Route, Routes } from "react-router-dom"
+import Hero from "./views/Hero/Hero"
 
 function App() {
 
   return (
     <>
+ 
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/login" element={<Login />} />
-          
+        <Route path="/calendario" element={<CalendarioProfesional />} />  
       </Routes>
     </>
   )
