@@ -106,6 +106,9 @@ function TablaEventos() {
             data={data}
             customStyles={customStyles}
             responsive
+            pagination
+            paginationPerPage={8}
+            onSelectedRowsChange={(data) => console.log(data)}
         />
 
     );
