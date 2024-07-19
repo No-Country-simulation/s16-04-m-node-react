@@ -17,7 +17,7 @@ const ThemedApp = () => {
   
 
   return (
-    <Theme appearance={appearance} accentColor="cyan" grayColor="sage">
+    <Theme appearance={appearance} accentColor="cyan" grayColor="sage"> 
       <BrowserRouter>
         <App />
       </BrowserRouter>
