@@ -53,7 +53,7 @@ const Home = () => {
       </Container>
       <Container width="100vw" className="flex pt-20" >
         <Flex direction="row" className="tablaEventos">
-          <TablaEventos />
+           <TablaEventos /> 
         </Flex>
       </Container>
     </Flex>

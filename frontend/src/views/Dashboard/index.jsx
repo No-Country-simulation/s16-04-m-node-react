@@ -1,4 +1,4 @@
-import { Grid, Separator } from "@radix-ui/themes";
+import { Flex, Grid, Separator } from "@radix-ui/themes";
 import SliderMenu from "../../components/SliderMenu";
 import { Outlet } from 'react-router-dom';
 import Navbardash from "../../components/Navbardash";
@@ -12,10 +12,15 @@ const Dashboard = () => {
         </nav>
         <Separator orientation="horizontal" size="4" style={{ margin: 0 }} />
         <main style={{ overflowY: "auto", minHeight: "calc(100vh - 64px)", margin: 0, padding: 0 }}>
-          <Grid columns="2" gap="1" rows="repeat(1, 64px)" width="auto">
-            <SliderMenu />
+          <Flex>
+              <SliderMenu />
+          
+
             <Outlet />
-          </Grid>
+          </Flex>
+          
+            
+         
         </main>
       </Grid>
     </div>
