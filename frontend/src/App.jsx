@@ -4,13 +4,13 @@ import Home from "./views/Home/Home";
 import Login from "./views/Login";
 import { Route, Routes } from "react-router-dom";
 import Calendario from "./views/CalendarioProfesional";
-import Hiro from "./views/Hero/Hero";
+import Hero from "./views/Hero/Hero";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Hiro />} />
+        <Route path="/" element={<Hero />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />}>

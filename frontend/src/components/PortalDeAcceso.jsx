@@ -1,5 +1,4 @@
 
-import { Flex } from '@radix-ui/themes';
 
 const PortalDeAcceso = () => {
 
