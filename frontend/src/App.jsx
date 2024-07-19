@@ -1,23 +1,26 @@
-
-import './App.css'
-import CalendarioProfesional from './views/CalendarioProfesional'
-import Dashboard from './views/Dashboard'
-import Login from './views/Login'
-import { Route, Routes } from "react-router-dom"
-import Hero from "./views/Hero/Hero"
+import "./App.css";
+import Dashboard from "./views/Dashboard";
+import Home from "./views/Home/Home";
+import Login from "./views/Login";
+import { Route, Routes } from "react-router-dom";
+import Calendario from "./views/CalendarioProfesional";
+import Hiro from "./views/Hero/Hero";
 
 function App() {
-
   return (
     <>
- 
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Hiro />} />
+
         <Route path="/login" element={<Login />} />
-        <Route path="/calendario" element={<CalendarioProfesional />} />  
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="/dashboard/home" element={<Home />} />
+          <Route path="/dashboard/calendario" element={<Calendario />} />
+          <Route path="/dashboard/paciente" element={"paciente"} />
+        </Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -3,22 +3,16 @@ import { Blockquote, Box, Text, TextField, Flex } from '@radix-ui/themes';
 import CalendarioDatePicker from "./CalendarioDatePicker";
 import CalendarioBigCalendar from "./CalendarioBigCalendar";
 import { BsArrowLeftCircle } from "react-icons/bs";
-import Navbar from "../../components/NavBar";
+
 
 
 const CalendarioProfesional = () => {
     return (
       <div>
-         <Navbar/>
       
-         <Flex gap="3">
-            
-            <Box width="64px" height="64px">
-            
-            </Box>
-
-            <Box width="404px" height="84px" className="pl-44">
-               <Flex align="start" direction="column" gap="1" className="pt-2">
+         <Flex  style={{flexWrap:'wrap' , gap:'1rem'}}>
+            <Box  position='relative' width="304px" height="100%" className="pl-5">
+               <Flex align="start" direction="column" gap="1" className="pt-2 ">
                   <Flex asChild gap="2">
                      <Text >
                         <BsArrowLeftCircle className="mt-1" />  
@@ -27,10 +21,9 @@ const CalendarioProfesional = () => {
                   </Flex>
                </Flex>
                   
-               <div className="pt-4">
-                  <CalendarioDatePicker/>
-               </div>
-            
+               <CalendarioDatePicker/>
+               
+               <div >
                   <p className=" text-[20px] pt-5">Especialidades</p>
                   <Box maxWidth="250px" className="pt-4">
                      <Blockquote color="blue" className="bg-[#0EA1E3] bg-opacity-20" >
@@ -55,11 +48,14 @@ const CalendarioProfesional = () => {
                         <p className=" text-[20px]  text-[#BE123C]">Pediatría</p>
                      </Blockquote>
                   </Box>
+               </div>
+            
+                  
 
             </Box>
 
-            <Box width="854px" height="524px" className="pl-10 pt-2">
-                  <Box width="678px" className="pb-4 pl-56">
+            <Box  position='relative' width="55vw" height="100%" className="pt-2">
+                  <Box width="90%" className="pb-4 ">
                      <TextField.Root placeholder="Buscar pacientes" width="50">
                         <TextField.Slot>
                            <MagnifyingGlassIcon height="16" width="16" />
@@ -67,7 +63,7 @@ const CalendarioProfesional = () => {
                      </TextField.Root>
                   </Box>
 
-                  <div style={{height: "95vh", width:"57vw"}}>
+                  <div style={{height: "100%", width:"100%"}}>
                      <CalendarioBigCalendar/>
                   </div>     
             </Box>

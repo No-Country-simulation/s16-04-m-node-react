@@ -1,7 +1,7 @@
 import '@radix-ui/themes/styles.css';
 import { Flex, Text, Inset, Separator, Box, Container, Heading } from '@radix-ui/themes';
 import '../../css/Hero.css';
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/Navbar";
 import { CalendarIcon, LaptopIcon, Pencil2Icon, CheckCircledIcon } from '@radix-ui/react-icons';
 import doctorAvatar from "../../assets/3d-happy-cartoon-doctor.png";
 import imagen9 from "../../assets/image9.png";
