@@ -1,7 +1,7 @@
 import DataTable from 'react-data-table-component';
-import { Button, Box } from "@radix-ui/themes";
+import { IconButton, Tooltip, Box } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
-import { AvatarIcon } from "@radix-ui/react-icons";
+import { AvatarIcon, CheckIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { IoEyeOutline } from "react-icons/io5";
 
 
@@ -17,7 +17,7 @@ function TablaEventos() {
         },
         headCells: {
             style: {
-                fontSize: "1rem",            
+                fontSize: "1rem",
             },
         },
         rows: {
@@ -35,11 +35,11 @@ function TablaEventos() {
                 paddingRight: '0',
             },
         },
-    
+
     }
-    
+
     const columns = [
-    
+
         {
             name: 'Horas',
             selector: row => row.horas,
@@ -73,18 +73,28 @@ function TablaEventos() {
         {
             name: 'Acciones',
             button: true,
-            cell: () => 
-            <>
-                <Button className="tarjeta bg-emerald-500 shadow-md shadow-slate-700 rounded-md hover:bg-emerald-400">Confirmar</Button>
-                <Button className="tarjeta bg-red-500 shadow-md shadow-slate-700 rounded-md hover:bg-red-400">Reprogramar</Button>
-                <Button className="tarjeta bg-violet-500 shadow-md shadow-slate-700 rounded-md hover:bg-violet-400">
-                <IoEyeOutline />
-                </Button>
-            </>
+            cell: () =>
+                <div>
+                    <Tooltip content="Confirmar Paciente">
+                        <IconButton radius="full">
+                            <CheckIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Add to library">
+                        <IconButton radius="full">
+                            <UpdateIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Add to library">
+                        <IconButton radius="full">
+                            <IoEyeOutline />
+                        </IconButton>
+                    </Tooltip>
+                </div>
         },
-    
+
     ];
-    
+
     const data = [
         {
             id: 1,
@@ -95,7 +105,7 @@ function TablaEventos() {
             paciente: "Georgina Solis",
             consulta: 'Chequeo Mensual',
         },
-    
+
     ]
 
 
