@@ -6,6 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import Calendario from "./views/CalendarioProfesional";
 import Hero from "./views/Hero/Hero";
 import AuthOutlet from "@auth-kit/react-router/AuthOutlet";
+import Paciente from "./views/Paciente/Paciente";
+
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/home" element={<Home />} />
           <Route path="/dashboard/calendario" element={<Calendario />} />
-          <Route path="/dashboard/paciente" element={"paciente"} />
+          <Route path="/dashboard/paciente" element={<Paciente />} />
         </Route>
         </Route>
         
