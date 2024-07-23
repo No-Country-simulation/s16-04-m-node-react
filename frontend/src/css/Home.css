@@ -10,11 +10,73 @@
 .fecha {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 400;
-    font-size: 1.35rem;
 }
 
 .tablaEventos {
     font-family: "Syne", sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width:900px) {
+    .menuMediaQ {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+    .squaresMediaQ {
+        flex-direction: column;
+        align-content: center;
+        text-wrap: wrap;
+    }
+
+    .squaresMediaQ2 {
+        flex-direction: row;
+        min-width: 40vw;
+        width: auto;
+        height: 15vh;
+        align-items: center;
+        margin-top: 1rem;
+        text-wrap: wrap;
+        font-weight: 300;
+        font-size: 0.9rem;
+        margin-left: 2rem;
+    }
+
+    .fecha {
+        font-size: 1rem;
+    }
+
+    .tablaMediaQ {
+        padding-top: 1rem;
+        width: 25vw;        
+    }
+
+}
+
+@media  screen and (max-width: 600px) {
+    .menuMediaQ .searchinput input{
+        text-align: center;
+    }
+    
+    .squaresMediaQ2 .fecha{
+        font-size: 1.2rem;
+    }
+        
+    .squaresMediaQ2 .tarjeta{
+        font-size: 1.2rem;
+    }
+    .squaresMediaQ2{
+        padding-top: 0;
+        border: none;
+    }
+    
+    .tablaMediaQ {
+        padding-top: 1rem;
+        width: 25vw;
+        justify-content: center;
+        align-items: center; 
+    }
 }
