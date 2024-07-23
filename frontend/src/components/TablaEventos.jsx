@@ -15,7 +15,7 @@ function TablaEventos() {
             style: {
                 width: '100%',
                 justifyContent: "around",
-                flexShrink: 1,
+                responsive: true,
             }
         },
         headCells: {
@@ -31,6 +31,7 @@ function TablaEventos() {
                 maxWidth: '98vw',
                 justify: 'center',
                 align: "center",
+                responsive: true,
             },
         },
         cells: {
@@ -38,6 +39,7 @@ function TablaEventos() {
             style: {
                 textAlign: "center",
                 justifyContent:'center',
+                responsive: false,
             },
         },
 
@@ -50,14 +52,14 @@ function TablaEventos() {
             selector: row => row.horas,
             sortable: true,
             style: {
-                width: '5vw', fontSize: "1.2rem",
+                width: '5vw', fontSize: "1.2rem", responsive: true,
             },
         },
         {
             name: 'Avatar',
             selector: row => row.avatar,
             style: {
-                width: '5vw',
+                width: '5vw', responsive: false,
             },
         },
         {
@@ -65,14 +67,14 @@ function TablaEventos() {
             selector: row => row.paciente,
             sortable: true,
             style: {
-                width: '10vw', fontSize: "1.2rem",
+                width: '10vw', fontSize: "1.2rem", responsive: true,
             },
         },
         {
             name: 'Consulta',
             selector: row => row.consulta,
             style: {
-                width: '20vw', fontSize: "1rem",
+                width: '20vw', fontSize: "1rem", responsive: true,
             },
         },
         {
@@ -114,7 +116,7 @@ function TablaEventos() {
 
 
     return (
-        <div className='flex flex-wrap text-wrap'>
+        <div width="inherit" className='flex flex-wrap text-wrap'>
             <DataTable
                 columns={columns}
                 data={data}

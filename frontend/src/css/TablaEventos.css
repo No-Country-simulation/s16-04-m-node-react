@@ -23,21 +23,23 @@
 
 @media screen and (max-width: 768px) {
     .home {
-        width:inherit;        
+        width: 80%; 
+        object-fit: scale-down;       
     }
     
     .tblMediaQ {
-        width: 15vw;
+        width: 50%;
         display: flex;
     }
     .rowsMediaQ {
-        width: auto;
+        width: 50%;
         height:auto;
         font-size: 0.9rem;
     }
     .cellsMediaQ {
         font-weight: 300;
         font-size: 0.9rem;
+        flex-shrink: inherit ;
     }
     .btn-grp {
         width: 23px;
