@@ -1,12 +1,12 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Logo from "../assets/CHEALTH.png";
 import { Flex, Button, Container } from '@radix-ui/themes';
-
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => (
     <div >
-        <Container position={'absolute'} justify={'between'} style={{width: "100%"}}>
+        <Container position={'absolute'} justify={'between'} style={{ width: "100%" }}>
             <Flex className="h-0 flex-1 relative justify-start pl-20 top-16 z-[5] items-center">
                 <a href="#">
                     <img
@@ -41,10 +41,11 @@ const Navbar = () => (
                     </NavigationMenu.List>
                 </NavigationMenu.Root>
             </Flex>
-
-            <Flex className="relative justify-end top-10 z-[1] h-0">
-                <Button className='h-10 bg-cyan-500 border-cyan-700 border-2 hover:bg-cyan-700 hover:border-spacing-1 hover:border-2 hover:border-cyan-900 rounded-md shadow-lg shadow-slate-900 leading-none font-medium cursor-pointer'>Portal de Acceso</Button>
-            </Flex>
+            <Link to='login'>
+                <Flex className="relative justify-end top-10 z-[1] h-0">
+                    <Button className='h-10 bg-cyan-500 border-cyan-700 border-2 hover:bg-cyan-700 hover:border-spacing-1 hover:border-2 hover:border-cyan-900 rounded-md shadow-lg shadow-slate-900 leading-none font-medium cursor-pointer'>Portal de Acceso</Button>
+                </Flex>
+            </Link>
         </Container>
     </div>
 );

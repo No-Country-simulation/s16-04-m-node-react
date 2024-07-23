@@ -3,7 +3,7 @@ import { IconButton, Tooltip, Box } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 import { AvatarIcon, CheckIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { IoEyeOutline } from "react-icons/io5";
-
+import "../css/TablaEventos.css"
 
 
 
@@ -11,28 +11,35 @@ function TablaEventos() {
 
     const customStyles = {
         table: {
+            className: "tblmediaQ",
             style: {
-                width: '90%',
+                width: '100%',
+                justifyContent: "around",
+                responsive: true,
             }
         },
         headCells: {
             style: {
                 fontSize: "1rem",
+                justifyContent: "center",
             },
         },
         rows: {
+            className: "rowsMediaQ",
             style: {
-                minHeight: '75px',
-                maxWidth: '77vw',
-                grow: 0,
-                justify: "center",
+                height: '55px',
+                maxWidth: '98vw',
+                justify: 'center',
                 align: "center",
+                responsive: true,
             },
         },
         cells: {
+            className: "cellsMediaQ",
             style: {
-                paddingLeft: '0',
-                paddingRight: '0',
+                textAlign: "center",
+                justifyContent:'center',
+                responsive: false,
             },
         },
 
@@ -45,14 +52,14 @@ function TablaEventos() {
             selector: row => row.horas,
             sortable: true,
             style: {
-                width: '5vw', fontSize: "1.2rem",
+                width: '5vw', fontSize: "1.2rem", responsive: true,
             },
         },
         {
             name: 'Avatar',
             selector: row => row.avatar,
             style: {
-                width: '5vw',
+                width: '5vw', responsive: false,
             },
         },
         {
@@ -60,33 +67,32 @@ function TablaEventos() {
             selector: row => row.paciente,
             sortable: true,
             style: {
-                width: '10vw', fontSize: "1.2rem",
+                width: '10vw', fontSize: "1.2rem", responsive: true,
             },
         },
         {
             name: 'Consulta',
             selector: row => row.consulta,
             style: {
-                width: '20vw', fontSize: "1rem",
+                width: '20vw', fontSize: "1rem", responsive: true,
             },
         },
         {
             name: 'Acciones',
-            button: true,
             cell: () =>
                 <div>
-                    <Tooltip content="Confirmar Paciente">
-                        <IconButton radius="full">
+                    <Tooltip className='bg-cyan-500' content="Confirmar Paciente">
+                        <IconButton className='bg-green-500 btn-grp' radius="full">
                             <CheckIcon />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip content="Add to library">
-                        <IconButton radius="full">
+                    <Tooltip className='bg-cyan-500' content="Reprogramar paciente">
+                        <IconButton className='bg-red-500 btn-grp' radius="full">
                             <UpdateIcon />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip content="Add to library">
-                        <IconButton radius="full">
+                    <Tooltip className='bg-cyan-500' content="Historia Clinica">
+                        <IconButton className='bg-violet-500 btn-grp' radius="full">
                             <IoEyeOutline />
                         </IconButton>
                     </Tooltip>
@@ -110,17 +116,17 @@ function TablaEventos() {
 
 
     return (
-
-        <DataTable
-            columns={columns}
-            data={data}
-            customStyles={customStyles}
-            responsive
-            pagination
-            paginationPerPage={8}
-            onSelectedRowsChange={(data) => console.log(data)}
-        />
-
+        <div width="inherit" className='flex flex-wrap text-wrap'>
+            <DataTable
+                columns={columns}
+                data={data}
+                customStyles={customStyles}
+                responsive
+                pagination
+                paginationPerPage={8}
+                onSelectedRowsChange={(data) => console.log(data)}
+            />
+        </div>
     );
 }
 

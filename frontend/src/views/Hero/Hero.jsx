@@ -26,7 +26,7 @@ const Hero = () => (
             <Flex pt="5rem" className='flex-wrap flex-row pl-5' justify={'center'}>
                 <Flex direction={'column'} p={"5"} width="30%" height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14'>
                     <LaptopIcon className='size-7 ' />
-                    <Heading maxWidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
                         Reserva de Citas
                     </Heading>
                     <Text as='p' width="auto" className='flex-0 text-wrap flex-shrink text-left text-cyan-100 font-normal'>
@@ -35,7 +35,7 @@ const Hero = () => (
                 </Flex>
                 <Flex direction={'column'} p={"5"} width='30%' height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14' >
                     <CalendarIcon className='size-7 ' />
-                    <Heading maxWidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
                         Calendario
                     </Heading>
                     <Text as='p' width="auto" className='text-left flex-0 text-wrap flex-shrink font-normal'>
@@ -45,7 +45,7 @@ const Hero = () => (
                 </Flex>
                 <Flex direction={'column'} p={"5"} width='30%' height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14'>
                     <Pencil2Icon className='size-7' />
-                    <Heading maxWidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
                         Expediente Medico Seguro
                     </Heading>
                     <Text as='p' width="auto" className='text-left flex-0 text-wrap flex-shrink font-normal'>
@@ -74,12 +74,12 @@ const Hero = () => (
             </Flex>
         </Container>
         <Container id="especialidades" justify={'center'} align={'center'} className='bg-image2' width={'100%'} height={'100vh'} style={{ display: "flex", flexWrap: "wrap" }}>
-            <Heading className='flex justify-center text-center text-cyan-800 font-semibold text-4xl py-20'>Especialidades</Heading>
-            <Flex direction={'row'} justify={'between'} align={'start'} gapX={'2'} pt={'7'} style={{ flexWrap: "wrap" }} >
-                <Flex direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
+            <Heading className='flex justify-center text-center text-cyan-800 font-semibold text-4xl py-24'>Especialidades</Heading>
+            <Flex className='especialidades' direction={'row'} justify={'between'} align={'start'} gapX={'2'} pt={'8'} style={{ flexWrap: "wrap" }} >
+                <Flex className='especialidades-group' direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
                     <Heading className='flex flex-wrap flex-shrink border-2 bg-indigo-300 shadow-md shadow-slate-800 px-6 py-4 rounded-lg font-normal mb-5'>Cardiologia</Heading>
-                    <Flex width={'25vw'} height={'auto'}>
-                        <Text as='p' size={'4'} className='text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 p-4 rounded-md'>
+                    <Flex className='texto' width={'25vw'} height={'auto'}>
+                        <Text as='p' size={'4'} className=' text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 p-4 rounded-md'>
                             Nuestra clínica cuenta con un departamento de cardiología especializado y equipado con las últimas tecnologías para garantizar a nuestros pacientes un tratamiento completo y de calidad.
                         </Text>
                     </Flex>
