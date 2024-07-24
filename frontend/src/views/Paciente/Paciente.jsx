@@ -2,38 +2,44 @@ import { Box, Flex } from '@radix-ui/themes';
 import NavbarList from "./NavbarList.jsx";
 import Eye from "../../assets/eye.png";
 import DataTable from "react-data-table-component";
-/*import Columns from "./Columns.jsx";*/
 
 function Paciente() {
   const columns = [
     {
       name: "ID",
       selector: row => row.id,
-      sortable: true
+      sortable: true,
     },
     {
       name: "Apellidos y Nombres",
       selector: row => row.apellido_nombre,
-      sortable: true
+      sortable: true,
     },
     {
       name: "Fecha de nacimiento",
       selector: row => row.fecha_nacimiento,
-      sortable: true
+      sortable: true,
     },
     {
       name: "Telefono",
-      selector: row => row.telefono
+      selector: row => row.telefono,
     },
     {
       name: "Convenio",
-      selector: row => row.convenio
+      selector: row => row.convenio,
     },
     {
       name: "Expediente",
-      selector: row => row.expediente
+      cell: row => (
+        <div 
+          style={{ cursor: 'pointer' }}
+          onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
+        >
+          <img src={Eye} alt="Ver expediente" />
+        </div>
+      ),
     },
-  ]
+  ];
 
   const data = [
     {
@@ -42,11 +48,7 @@ function Paciente() {
       fecha_nacimiento: "10/09/1968",
       telefono: "2346156787898",
       convenio: "",
-      expediente: <a href="#">
-        <img
-          src={Eye}
-        />
-      </a>
+      expediente: "", // La columna 'expediente' se maneja en la definición de columnas
     },
     {
       id: "251",
@@ -54,43 +56,35 @@ function Paciente() {
       fecha_nacimiento: "10/09/1978",
       telefono: "2346156787899",
       convenio: "",
-      expediente: <a href="#">
-        <img
-          src={Eye}
-        />
-      </a>
-    }
-  ]
+      expediente: "", // La columna 'expediente' se maneja en la definición de columnas
+    },
+  ];
+
+  // Función para manejar el evento click
+  const handleExpedienteClick = (id) => {
+    console.log(`Expediente clicked for ID: ${id}`);
+    // Puedes agregar lógica adicional aquí, como redirigir o mostrar un modal
+  };
 
   return (
-    <div>
-      <Flex align="start" direction="column">
-        <Box>
-          <NavbarList/>
-        </Box>
-        <Box>
-          <Flex align="start" direction="row">
-            <Box width="873px" className="pl-5">
-              <Flex align="start" direction="row" gap="1" className="pt-2" width="1100px">
-                <DataTable
-                  columns={columns}
-                  data={data}
-                />
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-      </Flex>
-    </div>
-
+    <Flex direction="column" align="start" gap="4">
+      <Box>
+        <NavbarList />
+      </Box>
+      <Box>
+        <Flex direction="row" align="start" gap="4" className="pt-2">
+          <Box width="100%">
+            <DataTable
+              columns={columns}
+              data={data}
+              pagination // Agrega paginación si es necesario
+              highlightOnHover // Opcional para destacar filas al pasar el cursor
+            />
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
-};
-
-/*<Flex
-  justify="center"
-  align="center"
-  gap='5px'
-  style={{ height: "100%", padding: "0 1rem"}}
-> input  <flex/> <flex/>*/
+}
 
 export default Paciente;
