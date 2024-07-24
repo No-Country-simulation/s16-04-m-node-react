@@ -9,7 +9,7 @@ import imagen10 from "../../assets/image10.png";
 import imagen11 from "../../assets/image11.png";
 const Hero = () => (
     < div style={{ height: "100%", width: "100%" }} >
-        <NavBar />
+        <Navbar />
         <Container maxWidth={'100vw'} maxHeight={'100vh'} className="bg-image overflow-hidden">
             <Flex direction={"row"} className='hero relative flex-wrap'>
                 <Text className='text-blue-200 hero-text text-wrap text-left'>Transforme la manera en que gestiona

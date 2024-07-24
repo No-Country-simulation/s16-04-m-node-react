@@ -60,31 +60,27 @@ function Paciente() {
     },
   ];
 
-  // Función para manejar el evento click
-  const handleExpedienteClick = (id) => {
-    console.log(`Expediente clicked for ID: ${id}`);
-    // Puedes agregar lógica adicional aquí, como redirigir o mostrar un modal
-  };
-
   return (
-    <Flex direction="column" align="start" gap="4">
-      <Box>
-        <NavbarList />
-      </Box>
-      <Box>
-        <Flex direction="row" align="start" gap="4" className="pt-2">
-          <Box width="100%">
-            <DataTable
-              columns={columns}
-              data={data}
-              pagination // Agrega paginación si es necesario
-              highlightOnHover // Opcional para destacar filas al pasar el cursor
-            />
-          </Box>
-        </Flex>
-      </Box>
-    </Flex>
-  );
+    <div>
+      <Flex align="start" direction="column">
+        <Box>
+          <NavbarList/>
+        </Box>
+        <Box>
+          <Flex align="start" direction="row">
+            <Box width="873px" className="pl-5">
+              <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
+                <DataTable
+                  columns={columns}
+                  data={data}
+                />
+              </Flex>
+            </Box>
+          </Flex>
+        </Box>
+      </Flex>
+    </div>
+  )
 }
 
 export default Paciente;
