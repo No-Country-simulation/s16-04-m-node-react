@@ -1,4 +1,4 @@
-import { Container, Flex, Box, Heading, Text } from "@radix-ui/themes"
+import { Container, Flex, Heading, Text } from "@radix-ui/themes"
 import '@radix-ui/themes/styles.css';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import "../../css/Home.css"
@@ -8,52 +8,50 @@ import TablaEventos from "../../components/TablaEventos";
 
 const Home = () => {
   return (
-    <Flex direction="column">
-      <Container>
-        <Flex direction="row" align="center" justify="center" className="gap-10 mt-5">
-          <div className="fecha px-10">
+    <Flex maxWidth={'80vw'} direction="column" className="home">      
+        <Flex direction="row" align="center" justify="center" className="menuMediaQ pt-5">
+          <Flex className="fecha text-2xl px-10">
             <FechaActual className="fecha" />
-          </div>
+          </Flex>
           <div>
-            <Heading className="fecha px-10">Citas del Dia</Heading>
+            <Heading className="flex fecha text-2xl justify-center px-10">Citas del Dia</Heading>
           </div>
-          <div className="flex gap-1 border-2 border-solid border-slate-400 outline-none ring-1 rounded-md align-middle text-center p-1" >
+          <div className="searchinput flex gap-1 border-2 border-solid border-slate-400 outline-none ring-1 rounded-md align-middle text-center p-1" >
             <MagnifyingGlassIcon className="ms-1 mt-1" />
             <input className="outline-none tarjeta px-10 text-center" type="search" name="search" id="search" placeholder=" Buscar Pacientes" />
           </div>
-        </Flex>
-      </Container>
-      <Container>
-        <Flex direction="row" justify="center" className="relative top-10" gapX="9">
-          <Box width="225px" height="150px" className="pt-5 border-solid border-4 border-indigo-700 rounded-xl" >
-            <Heading className="text-center text-sky-700 text-5xl fecha">
-              10
+        </Flex>      
+      <Container className=" flex flex-wrap justify-center">
+        <Flex  direction="row" justify="center" className="squaresMediaQ flex-wrap" gapX="4" pt={'2rem'}>
+          <Flex direction={'column'} width="19vw" p={'1rem'} className="squaresMediaQ2 pt-5 border-solid border-4 border-indigo-700 rounded-xl" >
+            <Heading className="text-center text-sky-700 text-4xl fecha">
+              10 
             </Heading>
-            <Text as="p" className="text-center tarjeta text-sky-700 text-2xl">
+            <Text as="p" className="text-center tarjeta text-sky-700 text-2xl px-2">
               Pacientes Confirmados
             </Text>
-          </Box>
-          <Box width="225px" height="150px" className="pt-5 border-solid border-4 border-emerald-400 rounded-xl " >
-            <Heading className="text-center text-emerald-400 text-5xl fecha">
+          </Flex>
+          <Flex direction={'column'} width="19vw" p={'1rem'} className="squaresMediaQ2 pt-5 border-solid border-4 border-emerald-400 rounded-xl " >
+            <Heading className="text-center text-emerald-400 text-4xl fecha">
               25
             </Heading>
             <Text as="p" className="box text-center tarjeta text-emerald-400 text-2xl px-2">
               Pacientes Atendidos
             </Text>
-          </Box>
-          <Box width="225px" height="150px" className="pt-5 border-solid border-4 border-red-400 rounded-xl " >
-            <Heading className="text-center text-red-400 text-5xl fecha">
+          </Flex>
+          <Flex direction={'column'} width="19vw" p={'1rem'} className="squaresMediaQ2 pt-5 border-solid border-4 border-red-400 rounded-xl " >
+            <Heading className="text-center text-red-400 text-4xl fecha">
               15
             </Heading>
             <Text as="p" className="text-center tarjeta text-red-400 text-2xl px-2">
               Pacientes Faltantes
             </Text>
-          </Box>
+          </Flex>
         </Flex>
       </Container>
-      <Container width="100vw" className="flex pt-20" >
-        <Flex direction="row" className="tablaEventos">
-           <TablaEventos /> 
+      <Container width="auto" className="tablaMediaQ" >
+        <Flex direction="row" justify={'center'} className="tablaEventos">
+           <TablaEventos width="100%"/> 
         </Flex>
       </Container>
     </Flex>
