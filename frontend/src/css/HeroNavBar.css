@@ -1,0 +1,32 @@
+.portal-logo {
+    padding-left: 5rem;
+    justify-content: flex-start;
+}
+.portal {
+    padding-right: 5rem;
+    justify-content:flex-end;
+}
+
+@media screen and (max-width:768px){
+    .portal-logo{
+        padding-left:1rem;
+    }
+    .portal-logo Box {
+        width:100px;
+    }
+    .portal{
+        padding-right: 1rem;        
+    }
+}
+
+@media screen and (max-width:425px){
+    
+    .portal-logo{
+        width: 85px;
+    }
+    .portal-nav {
+        position: relative;
+        top: 5rem;
+    }
+
+}

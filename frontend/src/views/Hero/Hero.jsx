@@ -11,31 +11,31 @@ const Hero = () => (
     < div style={{ height: "100%", width: "100%" }} >
         <NavBar />
         <Container maxWidth={'100vw'} maxHeight={'100vh'} className="bg-image overflow-hidden">
-                <Flex direction={"row"} style={{maxWidth:"60%"}} className='relative top-[5em] flex-shrink flex-wrap'>
-                    <Text className='text-blue-200 text-wrap text-left pl-20' size='6' >Transforme la manera en que gestiona
-                        los turnos médicos con nuestra aplicación intuitiva.
-                        Experimente un proceso de gestion más fluido, acceso conveniente a sus registros
-                        y una comunicación mejorada con sus pacientes.
-                    </Text>
-                </Flex>
-        </Container>
-        <Container id='servicios' pt={'4'} align={'center'} className='bg-sky-950 forced-colors: text-cyan-100' maxWidth={'100%'} height={'100vh'}>
-            <Flex maxWidth={'100vw'} className='flex-wrap text-wrap justify-center pt-9'>
-                <Heading className='text-center align-center font-semibold text-4xl pt-5' >Servicios</Heading>
+            <Flex direction={"row"} className='hero relative flex-wrap'>
+                <Text className='text-blue-200 hero-text text-wrap text-left'>Transforme la manera en que gestiona
+                    los turnos médicos con nuestra aplicación intuitiva.
+                    Experimente un proceso de gestion más fluido, acceso conveniente a sus registros
+                    y una comunicación mejorada con sus pacientes.
+                </Text>
             </Flex>
-            <Flex pt="5rem" className='flex-wrap flex-row pl-5' justify={'center'}>
-                <Flex direction={'column'} p={"5"} width="30%" height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14'>
+        </Container>
+        <Container id='servicios' className='bg-sky-950 servicios-contenedor flex forced-colors: text-cyan-100' maxWidth={'100%'} height={'100vh'}>
+            <Flex maxWidth={'100vw'} className='servicios-titulo-wrapper flex-wrap text-wrap justify-center'>
+                <Heading className='servicios-titulo text-center'>Servicios</Heading>
+            </Flex>
+            <Flex className='servicios-wrapper flex-wrap flex-row' justify={'center'}>
+                <Flex direction={'column'} width="30%" height="18rem" className='servicios-card flex-0 text-wrap relative'>
                     <LaptopIcon className='size-7 ' />
-                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 servicios-nombres'>
                         Reserva de Citas
                     </Heading>
                     <Text as='p' width="auto" className='flex-0 text-wrap flex-shrink text-left text-cyan-100 font-normal'>
                         Permite reservar citas online 24/7. Gestione sus turnos con facilidad y rapidez. Dedique mas tiempo a la atencion medica.
                     </Text>
                 </Flex>
-                <Flex direction={'column'} p={"5"} width='30%' height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14' >
+                <Flex direction={'column'} width='30%' height="18rem" className='servicios-card flex-0 text-wrap relative' >
                     <CalendarIcon className='size-7 ' />
-                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 servicios-nombres'>
                         Calendario
                     </Heading>
                     <Text as='p' width="auto" className='text-left flex-0 text-wrap flex-shrink font-normal'>
@@ -43,9 +43,9 @@ const Hero = () => (
                     </Text>
 
                 </Flex>
-                <Flex direction={'column'} p={"5"} width='30%' height="18rem" className='pt-5 flex-0 text-wrap flex-shrink relative top-14'>
+                <Flex direction={'column'} width='30%' height="18rem" className='servicios-card flex-0 text-wrap relative'>
                     <Pencil2Icon className='size-7' />
-                    <Heading maxwidth="auto" className='text-cyan-100 py-5'>
+                    <Heading maxwidth="auto" className='text-cyan-100 servicios-nombres'>
                         Expediente Medico Seguro
                     </Heading>
                     <Text as='p' width="auto" className='text-left flex-0 text-wrap flex-shrink font-normal'>
@@ -54,18 +54,18 @@ const Hero = () => (
                 </Flex>
             </Flex>
         </Container>
-        <Container id='caracteristicas' className='flex-row flex-wrap' width={'100%'} height={'100vh'} justify={'center'}>
-            <Flex className='flex-wrap'>
-                <Heading justify={'start'} className='text-4xl text-cyan-800 pl-24 pt-36 pb-24'>Todo lo que necesita para la gestión de su clínica de manera exitosa y eficiente</Heading>
+        <Container id='caracteristicas' className='caracteristicas'>
+            <Flex>
+                <Heading justify={'start'} className='caract-titulo text-cyan-800'>Todo lo que necesita para la gestión de su clínica de manera exitosa y eficiente</Heading>
             </Flex>
-            <Flex direction={'row'} justify={'between'}>
-                <Flex direction={'column'} maxWidth={'50%'} className=' pl-24 justify-start' style={{ flexWrap: "wrap" }}>
-                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'4'} ><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='text-2xl font-medium'>Mejor experiencia de sus pacientes</Text></Flex>
-                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'4'}><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='text-2xl font-medium'>Registros Médicos Seguros</Text></Flex>
-                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'4'}><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='text-2xl font-medium'>Bajos costos administrativos</Text></Flex>
+            <Flex direction={'row'} align={'center'} justify={'between'} gapX={'9'}>
+                <Flex className='caract-p' direction={'column'} maxWidth={'85%'} style={{ flexWrap: "wrap" }}>
+                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'3'} ><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='caract-line'>Mejor experiencia de sus pacientes</Text></Flex>
+                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'3'}><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='caract-line'>Bajos costos administrativos</Text></Flex>
+                    <Flex gapX={'2'} justify={'start'} align={'middle'} py={'3'}><CheckCircledIcon className='size-7 forced-colors: text-slate-500' /><Text className='caract-line'>Registros Médicos Seguros</Text></Flex>
                 </Flex>
 
-                <Flex className='relative justify-end'>
+                <Flex className=' doc relative justify-end pt-5'>
                     <img
                         width="325px"
                         src={doctorAvatar}
@@ -73,39 +73,41 @@ const Hero = () => (
                 </Flex>
             </Flex>
         </Container>
-        <Container id="especialidades" justify={'center'} align={'center'} className='bg-image2' width={'100%'} height={'100vh'} style={{ display: "flex", flexWrap: "wrap" }}>
-            <Heading className='flex justify-center text-center text-cyan-800 font-semibold text-4xl py-24'>Especialidades</Heading>
-            <Flex className='especialidades' direction={'row'} justify={'between'} align={'start'} gapX={'2'} pt={'8'} style={{ flexWrap: "wrap" }} >
-                <Flex className='especialidades-group' direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
-                    <Heading className='flex flex-wrap flex-shrink border-2 bg-indigo-300 shadow-md shadow-slate-800 px-6 py-4 rounded-lg font-normal mb-5'>Cardiologia</Heading>
-                    <Flex className='texto' width={'25vw'} height={'auto'}>
-                        <Text as='p' size={'4'} className=' text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 p-4 rounded-md'>
+        <Container id="especialidades" className='especialidades bg-image2'>
+            <Flex justify={'center'} pt={'3'}>
+                <Heading className='esp-titulo text-center font-semibold text-cyan-800 text-4xl'>Especialidades</Heading>
+            </Flex>
+            <Flex className='grp-cards'>
+                <Flex className='espcl-tarjeta' direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
+                    <Heading className='titulo-tarjeta flex border-2 bg-indigo-300 shadow-md shadow-slate-800 rounded-lg'>Cardiologia</Heading>
+                    <Flex className='contenedor-tarjeta' width={'25vw'} height={'auto'}>
+                        <Text as='p' size={'4'} className='tarjeta-espcl text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 rounded-md'>
                             Nuestra clínica cuenta con un departamento de cardiología especializado y equipado con las últimas tecnologías para garantizar a nuestros pacientes un tratamiento completo y de calidad.
                         </Text>
                     </Flex>
                 </Flex>
-                <Flex direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
-                    <Heading className='flex flex-wrap flex-shrink border-2 bg-lime-200 shadow-md shadow-slate-800 px-6 py-4 rounded-lg font-normal mb-5'>Neurologia</Heading>
-                    <Flex width={'25vw'} height={'auto'} >
-                        <Text as='p' size={'4'} className='text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 p-4 rounded-md'>
+                <Flex className='espcl-tarjeta' direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
+                    <Heading className='titulo-tarjeta flex flex-wrap border-2 bg-lime-200 shadow-md shadow-slate-800 rounded-lg'>Neurologia</Heading>
+                    <Flex className='contenedor-tarjeta' width={'25vw'} height={'auto'} >
+                        <Text as='p' size={'4'} className='tarjeta-espcl text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 rounded-md'>
                             El departamento de neurología es el mejor para diagnosticar y tratar incluso las afecciones neurológicas más difíciles.
                         </Text>
                     </Flex>
                 </Flex>
-                <Flex direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
-                    <Heading className='flex flex-wrap flex-shrink border-2 bg-pink-200 shadow-md shadow-slate-800 px-6 py-4 rounded-lg font-normal mb-5'>Ortopedia</Heading>
-                    <Flex width={'25vw'} height={'auto'} >
-                        <Text as='p' size={'4'} className='text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 p-4 rounded-md'>
+                <Flex className='espcl-tarjeta' direction={'column'} justify={'center'} align={'center'} width={'30%'} style={{ flexWrap: "wrap" }}>
+                    <Heading className='titulo-tarjeta flex flex-wrap border-2 bg-pink-200 shadow-md shadow-slate-800 rounded-lg'>Ortopedia</Heading>
+                    <Flex className='contenedor-tarjeta' width={'25vw'} height={'auto'} >
+                        <Text as='p' size={'4'} className='tarjeta-espcl text-wrap border-2 bg-slate-200 shadow-md shadow-slate-900 rounded-md'>
                             Los especialistas en ortopedia de nuestra clínica brindan tratamientos tanto quirúrgicos como no quirúrgicos para la artritis y las lesiones.
                         </Text>
                     </Flex>
                 </Flex>
             </Flex>
         </Container>
-        <Container id='nuestroBlog' maxWidth={'100vw'} height={'100vh'} p="9" style={{ flexWrap: "wrap" }}>
-            <Heading className='text-center justify-center flex flex-wrap text-cyan-800 font-semibold text-3xl pt-24 mb-20 pb-5'>Contenidos para tu bienestar</Heading>
+        <Container id='nuestroBlog' className='blog'>
+            <Heading className='blog-titulo text-center justify-center flex flex-wrap text-cyan-800'>Contenidos para tu bienestar</Heading>
             <Flex direction={'row'} gapX={'3'} style={{ flexWrap: "wrap" }}>
-                <Flex direction={'column'} maxWidth={'30%'}>
+                <Flex className='blog-articulo'>
                     <Inset clip="padding-box" side="top" pb="current">
                         <img
                             src={imagen11}
@@ -125,7 +127,7 @@ const Hero = () => (
                 <Flex align="center" gap="4" height="initial">
                     <Separator orientation="vertical" size="4" />
                 </Flex>
-                <Flex direction={'column'} maxWidth={'30%'}>
+                <Flex className='blog-articulo'>
                     <Inset clip="padding-box" side="top" pb="current">
                         <img
                             src={imagen10}
@@ -145,7 +147,7 @@ const Hero = () => (
                 <Flex align="center" gap="4" height="initial">
                     <Separator orientation="vertical" size="4" />
                 </Flex>
-                <Flex direction={'column'} maxWidth={'30%'}>
+                <Flex className='blog-articulo'>
                     <Inset clip="padding-box" side="top" pb="current">
                         <img
                             src={imagen9}
