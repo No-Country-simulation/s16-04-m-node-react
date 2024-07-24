@@ -1,7 +1,7 @@
 import '@radix-ui/themes/styles.css';
 import { Flex, Text, Inset, Separator, Container, Heading } from '@radix-ui/themes';
 import '../../css/Hero.css';
-import NavBar from "../../components/NavBar";
+import Navbar from "../../components/Navbar";
 import { CalendarIcon, LaptopIcon, Pencil2Icon, CheckCircledIcon } from '@radix-ui/react-icons';
 import doctorAvatar from "../../assets/3d-happy-cartoon-doctor.png";
 import imagen9 from "../../assets/image9.png";
@@ -9,7 +9,7 @@ import imagen10 from "../../assets/image10.png";
 import imagen11 from "../../assets/image11.png";
 const Hero = () => (
     < div style={{ height: "100%", width: "100%" }} >
-        <NavBar />
+        <Navbar />
         <Container maxWidth={'100vw'} maxHeight={'100vh'} className="bg-image overflow-hidden">
                 <Flex direction={"row"} style={{maxWidth:"60%"}} className='relative top-[5em] flex-shrink flex-wrap'>
                     <Text className='text-blue-200 text-wrap text-left pl-20' size='6' >Transforme la manera en que gestiona

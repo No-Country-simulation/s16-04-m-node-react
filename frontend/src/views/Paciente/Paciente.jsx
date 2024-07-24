@@ -71,7 +71,7 @@ function Paciente() {
         <Box>
           <Flex align="start" direction="row">
             <Box width="873px" className="pl-5">
-              <Flex align="start" direction="row" gap="1" className="pt-2" width="1100px">
+              <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
                 <DataTable
                   columns={columns}
                   data={data}
