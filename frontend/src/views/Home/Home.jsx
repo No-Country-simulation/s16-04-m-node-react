@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(listCitas());
     countConfirm();
-  }, [dispatch]);
+  }, []);
 
   const countConfirm = () => {
     let count = 0;
@@ -32,6 +32,7 @@ const Home = () => {
     setConfirmNumber(count);
   };
 
+  
   return (
     <Flex maxWidth={"80vw"} direction="column" className="home">
       <Flex
