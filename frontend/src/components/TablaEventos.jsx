@@ -4,10 +4,13 @@ import '@radix-ui/themes/styles.css';
 import { AvatarIcon, CheckIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { IoEyeOutline } from "react-icons/io5";
 import "../css/TablaEventos.css"
+import { useState } from 'react';
+import Reprogramar from '../views/Home/Reprogramar';
 
 
 
 function TablaEventos({dataCita}) {
+
 
     const customStyles = {
         table: {
@@ -90,9 +93,10 @@ function TablaEventos({dataCita}) {
                         </IconButton>
                     </Tooltip>
                     <Tooltip className='bg-cyan-500' content="Reprogramar paciente">
-                        <IconButton className='bg-red-500 btn-grp' radius="full">
-                            <UpdateIcon />
-                        </IconButton>
+                    <Reprogramar className='bg-red-500 btn-grp editCita' radius="full"
+                    
+                    />
+                       
                     </Tooltip>
                     <Tooltip className='bg-cyan-500' content="Historia Clinica">
                         <IconButton className='bg-violet-500 btn-grp' radius="full">
@@ -103,6 +107,8 @@ function TablaEventos({dataCita}) {
         },
 
     ];
+
+    
     console.log(dataCita)
 
     const data = [
@@ -121,6 +127,8 @@ function TablaEventos({dataCita}) {
 
     return (
         <div width="inherit" className='flex flex-wrap text-wrap'>
+           
+            
             <DataTable
                 columns={columns}
                 data={dataCita}
