@@ -2,8 +2,23 @@ import { Box, Flex } from '@radix-ui/themes';
 import NavbarList from "./NavbarList.jsx";
 import Eye from "../../assets/eye.png";
 import DataTable from "react-data-table-component";
+import { useAppDispatch, useAppSelector } from '../../hooks/useAppselector.js';
+import { useEffect } from 'react';
+import { listpacientes } from '../../store/slice/pacienteSlice.js';
+import { FaRegEye } from "react-icons/fa";
 
 function Paciente() {
+
+
+  const dataPacientes = useAppSelector((state) => state.paciente.pacienteData);
+
+  const dispatch = useAppDispatch();
+
+
+  useEffect(() => {
+    dispatch(listpacientes());
+ 
+  }, [dispatch]);
   const columns = [
     {
       name: "ID",
@@ -12,53 +27,36 @@ function Paciente() {
     },
     {
       name: "Apellidos y Nombres",
-      selector: row => row.apellido_nombre,
+      selector: row => row.name,
       sortable: true,
     },
     {
       name: "Fecha de nacimiento",
-      selector: row => row.fecha_nacimiento,
+      selector: row => row.birthdate,
       sortable: true,
     },
     {
-      name: "Telefono",
-      selector: row => row.telefono,
+      name: "Numero de Afiliado",
+      selector: row => row.numberAfiled,
     },
     {
       name: "Convenio",
-      selector: row => row.convenio,
+      selector: row => row.obraSocial,
     },
     {
       name: "Expediente",
       cell: row => (
         <div 
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', fontSize:'1.2rem' }}
           onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
         >
-          <img src={Eye} alt="Ver expediente" />
+          <FaRegEye />
         </div>
       ),
     },
   ];
 
-  const data = [
-    {
-      id: "252",
-      apellido_nombre: "Liza Arbertina Marquiz",
-      fecha_nacimiento: "10/09/1968",
-      telefono: "2346156787898",
-      convenio: "",
-      expediente: "", // La columna 'expediente' se maneja en la definición de columnas
-    },
-    {
-      id: "251",
-      apellido_nombre: "Darlene Robertson",
-      fecha_nacimiento: "10/09/1978",
-      telefono: "2346156787899",
-      convenio: "",
-      expediente: "", // La columna 'expediente' se maneja en la definición de columnas
-    },
-  ];
+
 
   return (
     <div>
@@ -72,7 +70,7 @@ function Paciente() {
               <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
                 <DataTable
                   columns={columns}
-                  data={data}
+                  data={dataPacientes}
                 />
               </Flex>
             </Box>

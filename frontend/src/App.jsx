@@ -17,14 +17,13 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
-        <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="/dashboard/home" element={<Home />} />
-          <Route path="/dashboard/calendario" element={<Calendario />} />
-          <Route path="/dashboard/paciente" element={<Paciente />} />
-          <Route path="/dashboard/historial" element={<Historial />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="/dashboard/home" element={<Home />} />
+            <Route path="/dashboard/calendario" element={<Calendario />} />
+            <Route path="/dashboard/paciente" element={<Paciente />} />
+            <Route path="/dashboard/historial" element={<Historial />} />
+          </Route>
         </Route>
-        </Route>
-        
       </Routes>
     </>
   );

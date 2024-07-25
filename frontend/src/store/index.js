@@ -5,6 +5,7 @@ import { combineReducers } from 'redux';
 import appearanceReducer from './slice/appearanceSlice'
 import userReducer from './slice/userSlice'
 import citasReducer from './slice/citasSlice'
+import pacienteReducer from './slice/pacienteSlice'
 
 const persistConfig = {
   key: 'root',
@@ -16,7 +17,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer,
     appearance: appearanceReducer,
-    citas: citasReducer
+    citas: citasReducer,
+    paciente: pacienteReducer
 });
 
 
