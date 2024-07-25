@@ -1,5 +1,5 @@
 import "./App.css";
-import { PatientsHome } from "./views/PatientsHome/PatientsHome";
+//import { PatientsHome } from "./views/PatientsHome/PatientsHome";
 import Dashboard from "./views/Dashboard";
 import Home from "./views/Home/Home";
 import Login from "./views/Login";
