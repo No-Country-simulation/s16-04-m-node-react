@@ -7,24 +7,31 @@ import TablaEventos from "../../components/TablaEventos";
 import { useAppDispatch, useAppSelector } from "../../hooks/useAppselector";
 import { useEffect, useState } from "react";
 import { listCitas } from "../../store/slice/citasSlice";
+import Loader from "../../components/Loader"; // Importa tu componente Loader
 
 const Home = () => {
   const dataCitas = useAppSelector((state) => state.citas.citaData);
   const [confirmNumber, setConfirmNumber] = useState(0);
   const [atendidosNumber, setatendidosNumber] = useState(0);
   const [faltantesNumber, setfaltantesNumber] = useState(0);
+  const [loading, setLoading] = useState(true); // Estado para el loader
 
   const dispatch = useAppDispatch();
 
-
   useEffect(() => {
-    dispatch(listCitas());
-    countConfirm();
-  }, []);
+    const fetchData = async () => {
+      await dispatch(listCitas());
+      countConfirm();
+      setTimeout(() => {
+        setLoading(false); 
+      }, 1000); 
+    };
+    fetchData();
+  }, [dispatch]);
 
   const countConfirm = () => {
     let count = 0;
-    dataCitas.map((item) => {
+    dataCitas.forEach((item) => {
       if (item.status === "accepted") {
         count++;
       }
@@ -32,7 +39,9 @@ const Home = () => {
     setConfirmNumber(count);
   };
 
-  
+  if (loading) {
+    return <Loader />; }
+
   return (
     <Flex maxWidth={"80vw"} direction="column" className="home">
       <Flex
@@ -126,4 +135,5 @@ const Home = () => {
     </Flex>
   );
 };
+
 export default Home;
