@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import appearanceReducer from './slice/appearanceSlice'
 import userReducer from './slice/userSlice'
+import citasReducer from './slice/citasSlice'
 
 const persistConfig = {
   key: 'root',
@@ -15,7 +16,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer,
     appearance: appearanceReducer,
-
+    citas: citasReducer
 });
 
 
