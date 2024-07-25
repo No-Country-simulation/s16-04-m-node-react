@@ -62,13 +62,13 @@ function Paciente() {
 
   return (
     <div>
-      <Flex align="start" direction="column">
+      <Flex direction="column" align="start">
         <Box>
           <NavbarList/>
         </Box>
         <Box>
-          <Flex align="start" direction="row">
-            <Box width="873px" className="pl-5">
+          <Flex direction="row" align="start">
+            <Box width="100%" className="pl-5">
               <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
                 <DataTable
                   columns={columns}
