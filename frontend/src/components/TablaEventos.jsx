@@ -7,7 +7,7 @@ import "../css/TablaEventos.css"
 
 
 
-function TablaEventos() {
+function TablaEventos({dataCita}) {
 
     const customStyles = {
         table: {
@@ -49,7 +49,7 @@ function TablaEventos() {
 
         {
             name: 'Horas',
-            selector: row => row.horas,
+            selector: row => row.time,
             sortable: true,
             style: {
                 width: '5vw', fontSize: "1.2rem", responsive: true,
@@ -57,14 +57,17 @@ function TablaEventos() {
         },
         {
             name: 'Avatar',
-            selector: row => row.avatar,
-            style: {
-                width: '5vw', responsive: false,
-            },
+            selector: row => (
+                <img 
+                    src={row.pacienteone.user.profilePicture} 
+                    alt="Profile" 
+                    style={{ width: '4vw' }} 
+                />
+            ),
         },
         {
             name: 'Paciente',
-            selector: row => row.paciente,
+            selector: row => row.pacienteone.surname,
             sortable: true,
             style: {
                 width: '10vw', fontSize: "1.2rem", responsive: true,
@@ -72,7 +75,7 @@ function TablaEventos() {
         },
         {
             name: 'Consulta',
-            selector: row => row.consulta,
+            selector: row => row.reason,
             style: {
                 width: '20vw', fontSize: "1rem", responsive: true,
             },
@@ -100,6 +103,7 @@ function TablaEventos() {
         },
 
     ];
+    console.log(dataCita)
 
     const data = [
         {
@@ -119,7 +123,7 @@ function TablaEventos() {
         <div width="inherit" className='flex flex-wrap text-wrap'>
             <DataTable
                 columns={columns}
-                data={data}
+                data={dataCita}
                 customStyles={customStyles}
                 responsive
                 pagination
