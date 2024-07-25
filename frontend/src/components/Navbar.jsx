@@ -6,6 +6,7 @@ import "../css/HeroNavBar.css";
 
 
 const Navbar = () => (
+
     <div >
         <Container position={'absolute'} justify={'between'} style={{ width: "100%" }}>
             <Flex className="portal-logo h-0 relative top-16 z-[5] items-center">
