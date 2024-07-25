@@ -1,4 +1,5 @@
 import "./App.css";
+//import { PatientsHome } from "./views/PatientsHome/PatientsHome";
 import Dashboard from "./views/Dashboard";
 import Home from "./views/Home/Home";
 import Login from "./views/Login";
@@ -12,6 +13,7 @@ import Historial from "./views/Historial/Historial";
 function App() {
   return (
     <>
+
       <Routes>
         <Route path="/" element={<Hero />} />
 

@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import "../css/HeroNavBar.css";
 
 
-const Navbar = () => (
-
+const NavBar = () => (
     <div >
         <Container position={'absolute'} justify={'between'} style={{ width: "100%" }}>
             <Flex className="portal-logo h-0 relative top-16 z-[5] items-center">
@@ -20,22 +19,22 @@ const Navbar = () => (
                 <NavigationMenu.Root className="relative top-5 z-[1] flex flex-wrap flex-1 h-0 justify-center align-middle items-center">
                     <NavigationMenu.List className="portal-nav flex flex-wrap m-5 list-none rounded-[6px] bg-blue-200 p-1 shadow-lg">
                         <NavigationMenu.Item>
-                            <NavigationMenu.Link className="flex select-none items-center 
+                            <NavigationMenu.Link href='#servicios' className="flex select-none items-center 
                     justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
                     leading-none outline-none hover:text-cyan-700 cursor-pointer">Servicios</NavigationMenu.Link>
                         </NavigationMenu.Item>
                         <NavigationMenu.Item>
-                            <NavigationMenu.Link className="flex select-none items-center 
+                            <NavigationMenu.Link href='#especialidades' className="flex select-none items-center 
                     justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
                     leading-none outline-none hover:text-cyan-700 cursor-pointer">Especialidades</NavigationMenu.Link>
                         </NavigationMenu.Item>
                         <NavigationMenu.Item>
-                            <NavigationMenu.Link className="flex select-none items-center 
+                            <NavigationMenu.Link href='#nuestroBlog' className="flex select-none items-center 
                     justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
                     leading-none outline-none hover:text-cyan-700 cursor-pointer">Nuestro Blog</NavigationMenu.Link>
                         </NavigationMenu.Item>
                         <NavigationMenu.Item>
-                            <NavigationMenu.Link className="flex select-none items-center 
+                            <NavigationMenu.Link href='#caracteristicas' className="flex select-none items-center 
                     justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium 
                     leading-none outline-none hover:text-cyan-700 cursor-pointer">Caracteristicas</NavigationMenu.Link>
                         </NavigationMenu.Item>
@@ -51,4 +50,4 @@ const Navbar = () => (
     </div>
 );
 
-export default Navbar;
+export default NavBar;

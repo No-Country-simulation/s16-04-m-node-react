@@ -141,7 +141,7 @@
     width: 100%;
     font-size:1.25rem;
     font-weight:400;
-    margin-top:1rem;
+    margin-top:5rem;
   }
   .servicios-card {
     flex-direction: row;
@@ -243,7 +243,6 @@
   .servicios-wrapper {
     padding-top: 0;
     justify-content: center;
-    
   }
   .servicios-card {
     padding: 0.5rem;
@@ -267,5 +266,11 @@
   }
   .doc {
     display: none;
+  }
+  .tarjeta-espcl {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    padding:5px;
   }
 }
