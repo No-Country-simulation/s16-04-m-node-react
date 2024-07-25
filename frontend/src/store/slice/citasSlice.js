@@ -28,7 +28,7 @@ export const listCitas = createAsyncThunk("citas/listCitas", async () => {
 const citaSlice = createSlice({
   name: "cita",
   initialState: {
-    citaData: null,
+    citaData: [],
     loading: false,
     error: null,
   },

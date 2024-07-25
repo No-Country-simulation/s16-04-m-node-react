@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Navbardash from "../../components/Navbardash";
 
 
+
 const Dashboard = () => {
   return (
     <div>
@@ -16,7 +17,7 @@ const Dashboard = () => {
         <main style={{ overflowY: "auto", minHeight: "calc(100vh - 64px)", margin: 0, padding: 0 }}>
           <Flex>
               <SliderMenu />
-          
+           
 
             <Outlet />
           </Flex>

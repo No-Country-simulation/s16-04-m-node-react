@@ -11,7 +11,6 @@ import Reprogramar from '../views/Home/Reprogramar';
 
 function TablaEventos({dataCita}) {
 
-
     const customStyles = {
         table: {
             className: "tblmediaQ",
@@ -70,7 +69,7 @@ function TablaEventos({dataCita}) {
         },
         {
             name: 'Paciente',
-            selector: row => row.pacienteone.surname,
+            selector: row => row.pacienteone.name,
             sortable: true,
             style: {
                 width: '10vw', fontSize: "1.2rem", responsive: true,
@@ -78,7 +77,7 @@ function TablaEventos({dataCita}) {
         },
         {
             name: 'Consulta',
-            selector: row => row.reason,
+            selector: row => row?.reason,
             style: {
                 width: '20vw', fontSize: "1rem", responsive: true,
             },

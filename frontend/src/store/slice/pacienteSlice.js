@@ -17,7 +17,7 @@ export const listpacientes = createAsyncThunk("pacientes/listPacientes", async (
 const pacienteSlice = createSlice({
   name: "paciente",
   initialState: {
-    pacienteData: null,
+    pacienteData: [],
     loading: false,
     error: null,
   },

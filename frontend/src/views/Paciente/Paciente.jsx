@@ -1,6 +1,5 @@
 import { Box, Flex } from '@radix-ui/themes';
 import NavbarList from "./NavbarList.jsx";
-import Eye from "../../assets/eye.png";
 import DataTable from "react-data-table-component";
 import { useAppDispatch, useAppSelector } from '../../hooks/useAppselector.js';
 import { useEffect } from 'react';
@@ -18,7 +17,7 @@ function Paciente() {
   useEffect(() => {
     dispatch(listpacientes());
  
-  }, [dispatch]);
+  }, []);
   const columns = [
     {
       name: "ID",
