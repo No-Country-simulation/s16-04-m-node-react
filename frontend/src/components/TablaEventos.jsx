@@ -4,6 +4,8 @@ import '@radix-ui/themes/styles.css';
 import { AvatarIcon, CheckIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { IoEyeOutline } from "react-icons/io5";
 import "../css/TablaEventos.css"
+import { useState } from 'react';
+import Reprogramar from '../views/Home/Reprogramar';
 
 
 
@@ -67,7 +69,7 @@ function TablaEventos({dataCita}) {
         },
         {
             name: 'Paciente',
-            selector: row => row.pacienteone.surname,
+            selector: row => row.pacienteone.name,
             sortable: true,
             style: {
                 width: '10vw', fontSize: "1.2rem", responsive: true,
@@ -75,7 +77,7 @@ function TablaEventos({dataCita}) {
         },
         {
             name: 'Consulta',
-            selector: row => row.reason,
+            selector: row => row?.reason,
             style: {
                 width: '20vw', fontSize: "1rem", responsive: true,
             },
@@ -90,9 +92,10 @@ function TablaEventos({dataCita}) {
                         </IconButton>
                     </Tooltip>
                     <Tooltip className='bg-cyan-500' content="Reprogramar paciente">
-                        <IconButton className='bg-red-500 btn-grp' radius="full">
-                            <UpdateIcon />
-                        </IconButton>
+                    <Reprogramar className='bg-red-500 btn-grp editCita' radius="full"
+                    
+                    />
+                       
                     </Tooltip>
                     <Tooltip className='bg-cyan-500' content="Historia Clinica">
                         <IconButton className='bg-violet-500 btn-grp' radius="full">
@@ -103,6 +106,8 @@ function TablaEventos({dataCita}) {
         },
 
     ];
+
+    
     console.log(dataCita)
 
     const data = [
@@ -121,6 +126,8 @@ function TablaEventos({dataCita}) {
 
     return (
         <div width="inherit" className='flex flex-wrap text-wrap'>
+           
+            
             <DataTable
                 columns={columns}
                 data={dataCita}
