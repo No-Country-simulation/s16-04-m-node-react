@@ -7,10 +7,12 @@ import doctorAvatar from "../../assets/3d-happy-cartoon-doctor.png";
 import imagen9 from "../../assets/image9.png";
 import imagen10 from "../../assets/image10.png";
 import imagen11 from "../../assets/image11.png";
+import ScrollToTopButton from './ScrollToTopButton';
+
 const Hero = () => (
     < div style={{ height: "100%", width: "100%" }} >
         <Navbar />
-        <Container maxWidth={'100vw'} maxHeight={'100vh'} className="bg-image overflow-hidden">
+        <Container id='home' maxWidth={'100vw'} maxHeight={'100vh'} className="bg-image overflow-hidden">
             <Flex direction={"row"} className='hero relative flex-wrap'>
                 <Text className='text-blue-200 hero-text text-wrap text-left'>Transforme la manera en que gestiona
                     los turnos médicos con nuestra aplicación intuitiva.
@@ -166,6 +168,7 @@ const Hero = () => (
                 </Flex>
             </Flex>
         </Container>
+        <ScrollToTopButton />
     </div>
 );
 
