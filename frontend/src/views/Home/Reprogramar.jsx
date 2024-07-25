@@ -14,28 +14,24 @@ const Reprogramar = () => {
   </Dialog.Trigger>
 
   <Dialog.Content maxWidth="450px" radius="full" >
-    <Dialog.Title>Editar</Dialog.Title>
+    <Dialog.Title>Reprogramar Cita</Dialog.Title>
     <Dialog.Description size="2" mb="4">
-      Make changes to your profile.
+      Seleccione la fecha y hora nueva
     </Dialog.Description>
 
     <Flex direction="column" gap="3">
       <label>
         <Text as="div" size="2" mb="1" weight="bold">
-          Name
+          Fecha
         </Text>
-        <TextField.Root
-          defaultValue="Freja Johnsen"
-          placeholder="Enter your full name"
+        <TextField.Root type="date"
         />
       </label>
       <label>
         <Text as="div" size="2" mb="1" weight="bold">
-          Email
+          Hora
         </Text>
-        <TextField.Root
-          defaultValue="freja@example.com"
-          placeholder="Enter your email"
+        <TextField.Root type="time"
         />
       </label>
     </Flex>
@@ -43,11 +39,11 @@ const Reprogramar = () => {
     <Flex gap="3" mt="4" justify="end">
       <Dialog.Close>
         <Button variant="soft" color="gray">
-          Cancel
+          Cancelar
         </Button>
       </Dialog.Close>
       <Dialog.Close>
-        <Button>Save</Button>
+        <Button>Guardar</Button>
       </Dialog.Close>
     </Flex>
   </Dialog.Content>
