@@ -17,7 +17,7 @@ const ScrollToTopButton = () => {
     return (
         <button
             onClick={handleScrollToTop}
-            className="fixed bottom-4 right-14 bg-cyan-500 text-white p-5
+            className="fixed bottom-3 right-8 bg-cyan-500 text-white p-4
       rounded-full shadow-lg shadow-slate-900 hover:bg-cyan-700 transition"
         >
             <ArrowUpIcon width={'18'} height={'18'} />

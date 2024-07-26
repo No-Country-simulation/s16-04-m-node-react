@@ -1,0 +1,33 @@
+.navpatientshome-link{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+@media screen and (max-width: 425px){
+    .navpatientshome {
+        float:inline-end;
+        flex-flow: row wrap;
+        width:75%;
+    }
+    .navpatientshome-list {
+        margin: 10px;
+    }
+    .navpatientshome-link{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
+@media screen and (max-width:320px){
+   
+    .navpatientshome-list {
+        margin: 5px;
+        padding: 2px 0 0 4px;
+    }
+    .navpatientshome-link{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
