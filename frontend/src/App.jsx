@@ -1,5 +1,5 @@
 import "./App.css";
-//import { PatientsHome } from "./views/PatientsHome/PatientsHome";
+import { PatientsHome } from "./views/PatientsHome/PatientsHome";
 import Dashboard from "./views/Dashboard";
 import Home from "./views/Home/Home";
 import Login from "./views/Login";
@@ -15,8 +15,7 @@ function App() {
     <>
 
       <Routes>
-        <Route path="/" element={<Hero />} />
-
+        <Route path="/" element={<Hero />} />        
         <Route path="/login" element={<Login />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
           <Route path="/dashboard" element={<Dashboard />}>
@@ -25,6 +24,7 @@ function App() {
             <Route path="/dashboard/paciente" element={<Paciente />} />
             <Route path="/dashboard/paciente/historial" element={<Historial />} />
           </Route>
+          <Route path="/patientshome" element={<PatientsHome/>}/>
         </Route>
       </Routes>
     </>
