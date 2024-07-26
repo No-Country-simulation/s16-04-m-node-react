@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/useAppselector.js';
 import { useEffect } from 'react';
 import { listpacientes } from '../../store/slice/pacienteSlice.js';
 import { FaRegEye } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Paciente() {
 
@@ -45,12 +46,14 @@ function Paciente() {
     {
       name: "Expediente",
       cell: row => (
-        <div 
-          style={{ cursor: 'pointer', fontSize:'1.2rem' }}
-          onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
-        >
-          <FaRegEye />
-        </div>
+        <Link to='historial'>
+          <div 
+            style={{ cursor: 'pointer', fontSize:'1.2rem' }}
+            onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
+          >
+            <FaRegEye />
+          </div>
+        </Link>
       ),
     },
   ];

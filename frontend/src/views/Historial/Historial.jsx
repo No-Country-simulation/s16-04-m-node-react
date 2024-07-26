@@ -8,7 +8,7 @@ import profile from "../../assets/profile.png";
 const Historial = () => {
   return(
     <div>
-      <Flex direction="row">
+      <Flex direction="row" style={{ flexWrap: "wrap" }}>
         <Box position='relative' width="504px" height="100%" className="pt-3 pl-5">
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column">
@@ -22,7 +22,7 @@ const Historial = () => {
                 <Flex direction="column">
                   <Box width="100%" height="35px" align="center">
                     <Text>
-                      Liza Albertina Marquiz
+                      Juan Alberto Marquiz
                     </Text>
                   </Box>
                   <Box width="100%" height="167px">
