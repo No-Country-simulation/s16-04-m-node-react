@@ -38,17 +38,17 @@ export const PatientsHome = () => {
                 </Flex>
                 <Flex justify={"center"} align={"start"} className='cards'>
                     <Flex direction={'column'} align={'start'} justify={'center'} className="grp-cards bg-opacity-20 text-left bg-cyan-800">
-                        <h2 className="text-slate-800 text-lg font-medium">Encuentra tu especialista </h2>
+                        <h2 className="text-slate-800 font-medium">Encuentra tu especialista </h2>
                         <p className="text-slate-800 grpcards-p">Las opiniones reales de miles de pacientes
                             te ayudarán a tomar siempre la mejor decisión</p>
                     </Flex>
                     <Flex direction={'column'} align={'start'} justify={'center'} className="grp-cards flex-wrap bg-opacity-20 text-left bg-cyan-800">
-                        <h2 className="text-slate-800 text-lg font-medium">Pide cita de forma fácil </h2>
+                        <h2 className="text-slate-800 font-medium">Pide cita de forma fácil </h2>
                         <p className="text-slate-800 grpcards-p">Elige la hora que prefieras y pide cita sin necesidad de llamar. 
                             Es fácil, cómodo y muy rápido.</p>
                     </Flex>
                     <Flex direction={'column'} align={'start'} justify={'center'} className="grp-cards bg-opacity-20 text-left bg-cyan-800">
-                        <h2 className="text-slate-800 text-lg font-medium">Recordatorios por Mail </h2>
+                        <h2 className="text-slate-800 font-medium">Recordatorios por Mail </h2>
                         <p className="text-slate-800 grpcards-p">Te confirmamos la cita al instante y te enviamos un recordatorio 
                             a tu mail antes de la cita.</p>
                     </Flex>
