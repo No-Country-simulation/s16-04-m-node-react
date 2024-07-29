@@ -7,6 +7,12 @@ import Calendario from "./views/CalendarioProfesional";
 import Hero from "./views/Hero/Hero";
 import AuthOutlet from "@auth-kit/react-router/AuthOutlet";
 import Paciente from "./views/Paciente/Paciente";
+import Registro from "./views/Registro";
+
+
+
+
+
 
 
 function App() {
@@ -14,8 +20,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Hero />} />
-
         <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />}/> 
         <Route element={<AuthOutlet fallbackPath="/login" />}>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/home" element={<Home />} />
