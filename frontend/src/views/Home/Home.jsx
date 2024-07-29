@@ -90,25 +90,10 @@ const Home = () => {
               as="p"
               className="text-center tarjeta text-sky-700 text-2xl px-2"
             >
-              Pacientes Confirmados
+              Citas Confirmados
             </Text>
           </Flex>
-          <Flex
-            direction={"column"}
-            width="19vw"
-            p={"1rem"}
-            className="squaresMediaQ2 pt-5 border-solid border-4 border-emerald-400 rounded-xl "
-          >
-            <Heading className="text-center text-emerald-400 text-4xl fecha">
-              {atendidosNumber}
-            </Heading>
-            <Text
-              as="p"
-              className="box text-center tarjeta text-emerald-400 text-2xl px-2"
-            >
-              Pacientes Atendidos
-            </Text>
-          </Flex>
+         
           <Flex
             direction={"column"}
             width="19vw"
@@ -122,7 +107,7 @@ const Home = () => {
               as="p"
               className="text-center tarjeta text-red-400 text-2xl px-2"
             >
-              Pacientes Faltantes
+              Citas Canceladas
             </Text>
           </Flex>
         </Flex>
