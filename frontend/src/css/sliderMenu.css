@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    .slider-menu {
+      display: flex !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .slider-menu {
+      display: none !important;
+    }
+  }
+  
