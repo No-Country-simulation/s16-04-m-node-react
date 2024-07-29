@@ -1,4 +1,5 @@
 import "./App.css";
+import { PatientsHome } from "./views/PatientsHome/PatientsHome";
 import Dashboard from "./views/Dashboard";
 import Home from "./views/Home/Home";
 import Login from "./views/Login";
@@ -12,17 +13,18 @@ import Historial from "./views/Historial/Historial";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Hero />} />
 
+      <Routes>
+        <Route path="/" element={<Hero />} />        
         <Route path="/login" element={<Login />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="/dashboard/home" element={<Home />} />
             <Route path="/dashboard/calendario" element={<Calendario />} />
             <Route path="/dashboard/paciente" element={<Paciente />} />
-            <Route path="/dashboard/historial" element={<Historial />} />
+            <Route path="/dashboard/paciente/historial" element={<Historial />} />
           </Route>
+          <Route path="/patientshome" element={<PatientsHome/>}/>
         </Route>
       </Routes>
     </>
