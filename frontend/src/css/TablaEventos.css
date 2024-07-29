@@ -5,47 +5,28 @@
 
 
 @media screen and (max-width: 900px) {
-    .tblMediaQ {
-        width: 25vw;
-        object-fit:fill
-    }
-    .rowsMediaQ {
-        height:auto;
-        font-size: 0.9rem;
-    }
-    .cellsMediaQ {
-        font-weight: 300;
-        font-size: 0.9rem;
-    }
+   
+ 
     .tarjeta {
         font-weight: 300;
         font-size: 0.9rem;
     }
-    .btn-grp {
-        width: 23px;
-        height: 23px;
-    }
+   
 }
 
 @media screen and (max-width: 768px) {
-    .home {
-        width: 80%; 
-        object-fit: scale-down;       
-    }
+   
     
     .tblMediaQ {
-        width: 50%;
         display: flex;
     }
     .rowsMediaQ {
-        width: 50%;
         height:auto;
         font-size: 0.9rem;
     }
     .cellsMediaQ {
         font-weight: 300;
         font-size: 0.9rem;
-        flex-shrink: inherit ;
     }
     .btn-grp {
         width: 23px;
