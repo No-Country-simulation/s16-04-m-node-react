@@ -13,7 +13,7 @@ const CalendarioProfesional = () => {
       try {
       const reponse = await citasList();
 
-      console.log(reponse.data);
+      
     } catch (error) {
       console.log(error);
     }
