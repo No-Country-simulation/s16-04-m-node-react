@@ -43,7 +43,7 @@ const Home = () => {
     return <Loader />; }
 
   return (
-    <Flex maxWidth={"80vw"} direction="column" className="home">
+    <Flex maxWidth={"100vw"} direction="column" className="home">
       <Flex
         direction="row"
         align="center"
@@ -69,12 +69,12 @@ const Home = () => {
           />
         </div>
       </Flex>
-      <Container className=" flex flex-wrap justify-center">
+      <Container >
         <Flex
           direction="row"
           justify="center"
           className="squaresMediaQ flex-wrap"
-          gapX="4"
+          gap={'1rem'}        
           pt={"2rem"}
         >
           <Flex
@@ -128,7 +128,7 @@ const Home = () => {
         </Flex>
       </Container>
       <Container width="auto" className="tablaMediaQ">
-        <Flex direction="row" justify={"center"} className="tablaEventos">
+        <Flex direction="row" justify={"center"} >
           <TablaEventos dataCita={dataCitas} />
         </Flex>
       </Container>

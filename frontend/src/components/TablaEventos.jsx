@@ -1,10 +1,9 @@
 import DataTable from 'react-data-table-component';
-import { IconButton, Tooltip, Box } from "@radix-ui/themes";
+import { IconButton, Tooltip } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
-import { AvatarIcon, CheckIcon, UpdateIcon } from "@radix-ui/react-icons";
+import {  CheckIcon } from "@radix-ui/react-icons";
 import { IoEyeOutline } from "react-icons/io5";
 import "../css/TablaEventos.css"
-import { useState } from 'react';
 import Reprogramar from '../views/Home/Reprogramar';
 
 
@@ -85,7 +84,7 @@ function TablaEventos({dataCita}) {
         {
             name: 'Acciones',
             cell: () =>
-                <div>
+                <div style={{display:'flex', alignItems:'center'}}>
                     <Tooltip className='bg-cyan-500' content="Confirmar Paciente">
                         <IconButton className='bg-green-500 btn-grp' radius="full">
                             <CheckIcon />
@@ -110,22 +109,11 @@ function TablaEventos({dataCita}) {
     
     console.log(dataCita)
 
-    const data = [
-        {
-            id: 1,
-            horas: '09:00',
-            avatar: <Box >
-                <AvatarIcon width="35px" height="35px" fillOpacity="0.5" />
-            </Box>,
-            paciente: "Georgina Solis",
-            consulta: 'Chequeo Mensual',
-        },
-
-    ]
+   
 
 
     return (
-        <div width="inherit" className='flex flex-wrap text-wrap'>
+        <div >
            
             
             <DataTable
