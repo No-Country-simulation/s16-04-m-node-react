@@ -10,13 +10,13 @@ const Dashboard = () => {
   return (
     <div>
       <Grid columns="1"  rows="1fr" style={{ minHeight: "100vh" }}>
-        <nav style={{ height: "64px", width: "100%", margin: 0, padding: 0 }}>
+        <nav style={{ height: "64px", width: "100%", margin: 0, padding: 0 }} >
           <Navbardash />
         </nav>
         <Separator orientation="horizontal" size="4" style={{ margin: 0 }} />
         <main style={{ overflowY: "auto", minHeight: "calc(100vh - 64px)", margin: 0, padding: 0 }}>
           <Flex>
-              <SliderMenu />
+              <SliderMenu  />
            
 
             <Outlet />

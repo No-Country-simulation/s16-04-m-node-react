@@ -1,0 +1,43 @@
+.hamburger-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+}
+.iconMenuslider{
+    font-size: 1.5rem;
+}
+.nav-dash{
+    position: relative;
+}
+.menu-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .nav-dash{
+        display: none;
+    }
+    .menu-close{
+        display: flex;
+    }
+    .hamburger-menu{
+        display: flex;
+    }
+    .nav-dash.active{
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+}
+  }
