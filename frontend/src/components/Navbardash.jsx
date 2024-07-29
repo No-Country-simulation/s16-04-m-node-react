@@ -8,6 +8,7 @@ import { LuMoon } from "react-icons/lu";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../store/slice/appearanceSlice";
 
+
 const Navbardash = () => {
 
   const dispatch = useDispatch()
@@ -22,6 +23,7 @@ const Navbardash = () => {
         justify="between"
         align="center"
         style={{ height: "100%", width: "100%", padding: "0 1rem"}}
+      
       >
         <Logo />
         <Flex
