@@ -24,7 +24,7 @@ const CalendarioProfesional = () => {
 
   return (
     <div>
-      <Flex style={{ flexWrap: "wrap", gap: "1rem" }}>
+      <Flex style={{ flexWrap: "wrap", gap: "1rem", justifyContent:'center' }}>
         <Box position="relative" width="304px" height="100%" className="pl-5">
           <Flex align="start" direction="column" gap="1" className="pt-2 ">
             <Flex asChild gap="2">
@@ -71,9 +71,9 @@ const CalendarioProfesional = () => {
           </div>
         </Box>
 
-        <Box position="relative" width="55vw" height="100%" className="pt-2">
-          <Box width="90%" className="pb-4 ">
-            <TextField.Root placeholder="Buscar pacientes" width="50">
+        <Box position="relative"  height="100%" className="pt-2">
+          <Box width="100%" className="pb-4 ">
+            <TextField.Root placeholder="Buscar pacientes" width="60">
               <TextField.Slot>
                 <MagnifyingGlassIcon height="16" width="16" />
               </TextField.Slot>
