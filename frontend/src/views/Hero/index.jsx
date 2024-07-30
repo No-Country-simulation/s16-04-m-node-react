@@ -31,7 +31,7 @@ const Hiro = () => {
           <section className="menuNav">
             <MenuNavHiro isBurgerMenu={false} />
           </section>
-          <Button>Portal Acceso</Button>
+          <Button className="btnAcceso">Portal Acceso</Button>
         </div>
 
         <section className="bodyHero">

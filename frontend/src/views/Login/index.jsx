@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Container,
   Card,
@@ -14,23 +15,21 @@ import { FcGoogle } from "react-icons/fc";
 import { authenticateUser } from "../../utils/authUtils";
 import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useSignIn from "react-auth-kit/hooks/useSignIn";
-import { listGoogle } from "../../store/slice/userSlice";
-import { useAppDispatch } from "../../hooks/useAppselector";
+import { handleGoogleLogin } from "../../utils/GoogleAuth"; // Importa la función de autenticación con Google
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const signIn = useSignIn();
   const navigate = useNavigate();
-  const dispacth = useAppDispatch()
-  
 
   const onSubmit = (data) => {
     authenticateUser(data, signIn, navigate);
   };
+
   const onSubmitGoogle = () => {
-    dispacth(listGoogle());
+    handleGoogleLogin();
   };
 
   return (
@@ -82,14 +81,12 @@ const Login = () => {
                     <span className="mx-2 text-gray-500">O</span>
                     <Separator orientation="horizontal" size="4" />
                   </div>
-                  <button className="btn-google"
-                  onClick={onSubmitGoogle}
-                  >
+                  <button className="btn-google" onClick={onSubmitGoogle}>
                     <FcGoogle /> Ingresar con Google
                   </button>
-                <Text className="crearCuenta">
-                  ¿No tienes una cuenta? <Link href="#">Crear Cuenta</Link>
-                </Text>
+                  <Text className="crearCuenta">
+                    ¿No tienes una cuenta? <Link href="/registro">Crear Cuenta</Link>
+                  </Text>
                 </Flex>
               </form>
             </Card>
