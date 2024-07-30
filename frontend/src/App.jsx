@@ -12,11 +12,14 @@ import Historial from "./views/Historial/Historial";
 import Profile from "./views/Profile";
 import Registro from "./views/Registro";
 
+
+
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Hero />} >
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
