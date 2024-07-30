@@ -9,16 +9,16 @@ const Historial = () => {
   return(
     <div>
       <Flex direction="row" style={{ flexWrap: "wrap" }}>
-        <Box position='relative' width="504px" height="100%" className="pt-3 pl-5">
+        <Box position='relative' width="39%" height="100%" className="pt-3 pl-5 pr-2">
           <Flex align="start" direction="column" gap="1">
-            <Flex direction="column">
+            <Flex direction="column" width="100%">
               <Flex asChild gap="2">
                 <Text>
                   <ArrowLeftIcon className="mt-1" />
                   Historia Clínica
                 </Text>
               </Flex>
-              <Box width="444px" height="215px" className="mt-9 pt-3 border-solid border-2 border-gray rounded-l rounded-r">
+              <Box width="100%" height="215px" className="mt-9 pt-3 border-solid border-2 border-gray rounded-l rounded-r">
                 <Flex direction="column">
                   <Box width="100%" height="35px" align="center">
                     <Text>
@@ -56,11 +56,11 @@ const Historial = () => {
                 </Flex>
               </Box>
             </Flex>
-            <Flex direction="column">
-              <Box width="444px" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+            <Flex direction="column" width="100%">
+              <Box width="100%" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ÚLTIMOS SIGNOS VITALES
               </Box>
-              <Box width="444px" height="438px" className="mt-3 border-solid border-2 border-gray rounded-l rounded-r">
+              <Box width="100%" height="438px" className="mt-3 border-solid border-2 border-gray rounded-l rounded-r">
                 <Flex direction="column" className="pl-5 pt-5">
                   <Box>
                     <Flex direction="row">
@@ -116,16 +116,16 @@ const Historial = () => {
             </Flex>
           </Flex>
         </Box>
-        <Box position='relative' width="504px" height="100%" className="pt-3 pl-5">
-          <Flex align="start" direction="column" gap="1">
-            <Flex direction="column">
+        <Box position='relative' width="61%" height="100%" className="pt-3 pl-2 pr-2">
+          <Flex align="end" direction="column" gap="1">
+            <Flex direction="column" width="100%">
               <Box width="290px" height="48px" className="bg-violet-500 text-white rounded-l rounded-r">
                 INICIAR NUEVA CONSULTA
               </Box>
-              <Box width="730px" height="48px" className="mt-3 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+              <Box width="100%" height="48px" className="mt-3 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ALERGIAS
               </Box>
-              <Box width="730px" height="240px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+              <Box width="100%" height="240px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
                 <Flex direction="column" className="pl-20 pt-5">
                   <Box>
                     <Text>Alergias a medicamentos:</Text>
@@ -148,11 +148,11 @@ const Historial = () => {
                 </Flex>
               </Box>
             </Flex>
-            <Flex direction="column">
-              <Box width="730px" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+            <Flex direction="column" width="100%">
+              <Box width="100%" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ANTECEDENTES PATOLOGICOS
               </Box>
-              <Box width="730px" height="332px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+              <Box width="100%" height="332px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
                 <Flex direction="column" className="pl-6 pt-3">
                   <Text>Hipertensión arterial:</Text>
                   <Text>Diagnóstico: 2010</Text>

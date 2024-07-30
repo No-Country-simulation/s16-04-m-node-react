@@ -56,11 +56,23 @@ function Paciente() {
   ];
 
   return (
-    <div className="containerPaciente">
-      <Flex direction="column" gap="1rem">
-        <NavbarList />
-
-        <DataTable columns={columns} data={dataPacientes} className="tablePaciente" />
+    <div width="100%">
+      <Flex direction="column" align="start" width="100%">
+        <Box width="100%">
+          <NavbarList/>
+        </Box>
+        <Box width="100%">
+          <Flex direction="row" align="start" width="100%">
+            <Box width="100%" className="pl-5">
+              <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
+                <DataTable
+                  columns={columns}
+                  data={dataPacientes}
+                />
+              </Flex>
+            </Box>
+          </Flex>
+        </Box>
       </Flex>
     </div>
   );

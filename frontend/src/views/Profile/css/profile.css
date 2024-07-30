@@ -1,0 +1,63 @@
+@import '@radix-ui/colors/violet.css';
+
+.SeparatorRoot {
+  background-color: var(--violet-6);
+}
+.SeparatorRoot[data-orientation='horizontal'] {
+  height: 1px;
+  width: 100%;
+}
+.SeparatorRoot[data-orientation='vertical'] {
+  height: 100%;
+  width: 1px;
+}
+
+
+.containerProfile{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.containerProfile .portadaImg{
+    background-image: url('../../../assets//portadaImg.jpg');
+    width: 100%;
+    height: 10rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+.containerProfile .contentProfile{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.avataruser{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contentAvatar{
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid #219ebc;
+    border-radius: 50%;
+    padding: .5rem;
+    overflow: hidden;
+    position: absolute;
+    top: -60px;
+}
+.contentAvatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.heading{
+    margin-left: 8rem;
+}
