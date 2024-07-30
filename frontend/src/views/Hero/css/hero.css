@@ -1,4 +1,4 @@
-.containerHero{
+.containerHero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -9,18 +9,34 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.containerHero .headHero{
+
+.containerHero .headHero {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
 }
-.headHero img{
+
+.headHero img {
     width: 7rem;
     height: 8rem;
 }
-.textHero{
+
+.iconHero {
+    cursor: pointer;
+    padding: 0.35rem;
+    border: 1px solid rgb(56, 105, 105);
+    background-color: rgb(56, 197, 197);
+    border-radius: 7px;
+    box-shadow: rgb(27, 28, 29) 1px 3px 8px;
+}
+.btnPortal{
+    cursor:pointer;
+    box-shadow: rgb(27, 28, 29) 1px 5px 8px;
+}
+
+.textHero {
     width: 50%;
     padding: 2rem 5rem;
     color: white;
@@ -28,10 +44,11 @@
 }
 
 @media screen and (max-width:900px) {
-    .menuNav{
+    .menuNav {
         display: none;
     }
-    .textHero{
+
+    .textHero {
         width: 100%;
     }
 }
