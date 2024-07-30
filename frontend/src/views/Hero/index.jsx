@@ -1,6 +1,7 @@
-import { Button, Flex } from "@radix-ui/themes";
+import { Button, Flex} from "@radix-ui/themes";
+import { slide as Menu } from 'react-burger-menu';
 import "./css/hero.css";
-import '../../css/dashboard.css'
+import '../../css/dashboard.css';
 import Logo from "../../assets/CHEALTH.png";
 import MenuNavHiro from "./components/MenuNavHiro";
 import { MdMenu } from "react-icons/md";
@@ -8,30 +9,28 @@ import { useState } from "react";
 import ServiciosHiro from "./components/ServiciosHiro";
 import Especialidades from "./components/Especialidades";
 import Blog from "./components/Blog";
-import { Link } from "react-router-dom";
-import ScrollToTopButton from "./ScrollToTopButton.jsx";
 
 
 const Hiro = () => {
   const [active, setActive] = useState(false);
 
-  const handleMenu = () => {
-    setActive(!active);
-  };
+
 
   return (
     <>
       <Flex className="containerHero">
-        <div className="hamburger-menu">
-          <span className="iconMenuslider" style={{ color: "white" }}>
-            <MdMenu onClick={handleMenu} />
-          </span>
-        </div>
+      
+      <div className="menuEscritorio">
+         <Menu right isOpen={active} onStateChange={(state) => setActive(state.isOpen)} >
+          <MenuNavHiro isBurgerMenu={true} />
+        </Menu>
+      </div>
+       
 
         <div className="headHero">
           <img src={Logo} alt="logo" />
           <section className="menuNav">
-            <MenuNavHiro />
+            <MenuNavHiro isBurgerMenu={false} />
           </section>
           <Link to="login">
           <Button>Portal Acceso</Button>
@@ -56,3 +55,5 @@ const Hiro = () => {
 };
 
 export default Hiro;
+
+
