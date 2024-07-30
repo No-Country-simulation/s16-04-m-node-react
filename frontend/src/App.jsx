@@ -10,6 +10,7 @@ import Hero from "./views/Hero";
 import Paciente from "./views/Paciente/Paciente";
 import Historial from "./views/Historial/Historial";
 import Profile from "./views/Profile";
+import Registro from "./views/Registro";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="/dashboard/home" element={<Home />} />
