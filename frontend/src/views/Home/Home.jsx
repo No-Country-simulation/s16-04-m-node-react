@@ -11,9 +11,9 @@ import Loader from "../../components/Loader"; // Importa tu componente Loader
 
 const Home = () => {
   const dataCitas = useAppSelector((state) => state.citas.citaData);
-  const [confirmNumber, setConfirmNumber] = useState(0);
-  const [atendidosNumber, setatendidosNumber] = useState(0);
-  const [faltantesNumber, setfaltantesNumber] = useState(0);
+  const [confirmNumber, setConfirmNumber] = useState(3);
+  const [atendidosNumber, setatendidosNumber] = useState(2);
+  const [faltantesNumber, setfaltantesNumber] = useState(2);
   const [loading, setLoading] = useState(true); // Estado para el loader
 
   const dispatch = useAppDispatch();
@@ -43,7 +43,7 @@ const Home = () => {
     return <Loader />; }
 
   return (
-    <Flex maxWidth={"80vw"} direction="column" className="home">
+    <Flex maxWidth={"100vw"} direction="column" className="home">
       <Flex
         direction="row"
         align="center"
@@ -69,12 +69,12 @@ const Home = () => {
           />
         </div>
       </Flex>
-      <Container className=" flex flex-wrap justify-center">
+      <Container >
         <Flex
           direction="row"
           justify="center"
           className="squaresMediaQ flex-wrap"
-          gapX="4"
+          gap={'1rem'}        
           pt={"2rem"}
         >
           <Flex
@@ -84,29 +84,31 @@ const Home = () => {
             className="squaresMediaQ2 pt-5 border-solid border-4 border-indigo-700 rounded-xl"
           >
             <Heading className="text-center text-sky-700 text-4xl fecha">
-              {confirmNumber}
+              {/* {confirmNumber} */}
+              3
             </Heading>
             <Text
               as="p"
               className="text-center tarjeta text-sky-700 text-2xl px-2"
             >
-              Pacientes Confirmados
+              Citas Confirmados
             </Text>
           </Flex>
+         
           <Flex
             direction={"column"}
             width="19vw"
             p={"1rem"}
-            className="squaresMediaQ2 pt-5 border-solid border-4 border-emerald-400 rounded-xl "
+            className="squaresMediaQ2 pt-5 border-solid border-4 border-yellow-400 rounded-xl "
           >
-            <Heading className="text-center text-emerald-400 text-4xl fecha">
-              {atendidosNumber}
+            <Heading className="text-center text-yellow-400 text-4xl fecha">
+              {faltantesNumber}
             </Heading>
             <Text
               as="p"
-              className="box text-center tarjeta text-emerald-400 text-2xl px-2"
+              className="text-center tarjeta text-yellow-400 text-2xl px-2"
             >
-              Pacientes Atendidos
+              Citas en Esperas
             </Text>
           </Flex>
           <Flex
@@ -122,13 +124,13 @@ const Home = () => {
               as="p"
               className="text-center tarjeta text-red-400 text-2xl px-2"
             >
-              Pacientes Faltantes
+              Citas Canceladas
             </Text>
           </Flex>
         </Flex>
       </Container>
       <Container width="auto" className="tablaMediaQ">
-        <Flex direction="row" justify={"center"} className="tablaEventos">
+        <Flex direction="row" justify={"center"} >
           <TablaEventos dataCita={dataCitas} />
         </Flex>
       </Container>

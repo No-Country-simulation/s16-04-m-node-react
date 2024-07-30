@@ -13,7 +13,6 @@ export default function CalendarioDatePicker(){
    return(
       <div>
           <DatePicker
-                className="w-full md:w-[472px] h-[378px] md:h-[450px]"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 inline
