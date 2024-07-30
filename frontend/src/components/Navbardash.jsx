@@ -39,7 +39,7 @@ const Navbardash = () => {
         <Avatar.Root className="AvatarRoot">
           <Avatar.Image
             className="AvatarImage"
-            src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+            src="https://wallpaper-house.com/data/out/9/wallpaper2you_298208.jpg"
             alt="Colm Tuite"
           />
           <Avatar.Fallback className="AvatarFallback" delayMs={600}>
