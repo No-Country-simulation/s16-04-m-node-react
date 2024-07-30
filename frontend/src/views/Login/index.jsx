@@ -6,6 +6,7 @@ import {
   Button,
   Strong,
   Separator,
+  Link,
 } from "@radix-ui/themes";
 import Logo from "../../assets/CHEALTH.png";
 import "../../css/login.css";
@@ -15,14 +16,21 @@ import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
 import {  useNavigate } from "react-router-dom";
 import useSignIn from "react-auth-kit/hooks/useSignIn";
+import { listGoogle } from "../../store/slice/userSlice";
+import { useAppDispatch } from "../../hooks/useAppselector";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const signIn = useSignIn();
   const navigate = useNavigate();
+  const dispacth = useAppDispatch()
+  
 
   const onSubmit = (data) => {
     authenticateUser(data, signIn, navigate);
+  };
+  const onSubmitGoogle = () => {
+    dispacth(listGoogle());
   };
 
   return (
@@ -74,9 +82,14 @@ const Login = () => {
                     <span className="mx-2 text-gray-500">O</span>
                     <Separator orientation="horizontal" size="4" />
                   </div>
-                  <button className="btn-google">
+                  <button className="btn-google"
+                  onClick={onSubmitGoogle}
+                  >
                     <FcGoogle /> Ingresar con Google
                   </button>
+                <Text className="crearCuenta">
+                  ¿No tienes una cuenta? <Link href="#">Crear Cuenta</Link>
+                </Text>
                 </Flex>
               </form>
             </Card>
