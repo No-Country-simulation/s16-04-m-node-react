@@ -23,7 +23,7 @@ const Especialidades = () => {
 
     return (
         <>
-            <div id="especialidades" className="containerEspecialidades">
+            <div className="containerEspecialidades">
                 <h1>Especialidades</h1>
                 <section className="listCardespecialidades">
                     {dataEspecialidades.map((especialidad, index) => (

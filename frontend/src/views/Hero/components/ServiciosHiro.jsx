@@ -27,7 +27,7 @@ const ServiciosHiro = () => {
 
   return (
     <>
-      <div id="servicios" className="containerServicioHero">
+      <div className="containerServicioHero">
         <section className="servicios">
           <h1>Servicios</h1>
           <section>
