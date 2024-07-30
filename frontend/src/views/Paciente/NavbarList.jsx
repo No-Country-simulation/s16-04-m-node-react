@@ -5,8 +5,8 @@ const NavbarList = () => {
   return (
     <div>
       <Flex gap="3">
-        <Box width="404px" height="48px" className="pl-5">
-          <Flex align="start" direction="row" gap="1" className="pt-2">
+        <Box width="404px" height="48px" className="pt-3 pl-5">
+          <Flex align="start" direction="row" gap="1">
             <Flex asChild gap="2">
               <Text >
                 <ArrowLeftIcon className="mt-1" />  
