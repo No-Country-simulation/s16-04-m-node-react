@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+.home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
 .tarjeta {
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
@@ -11,11 +19,10 @@
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 400;
 }
-
-.tablaEventos {
-    font-family: "Syne", sans-serif;
-    font-weight: 400;
+.confirmCita{
+    border-radius: 50%;
 }
+
 
 
 @media screen and (max-width:900px) {
@@ -23,7 +30,6 @@
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-left: 2rem;
     }
 
     .squaresMediaQ {
@@ -42,7 +48,6 @@
         text-wrap: wrap;
         font-weight: 300;
         font-size: 0.9rem;
-        margin-left: 2rem;
     }
 
     .fecha {
@@ -50,8 +55,7 @@
     }
 
     .tablaMediaQ {
-        padding-top: 1rem;
-        width: 25vw;        
+        padding-top: 1rem;      
     }
 
 }
@@ -73,10 +77,5 @@
         border: none;
     }
     
-    .tablaMediaQ {
-        padding-top: 1rem;
-        width: 25vw;
-        justify-content: center;
-        align-items: center; 
-    }
+   
 }
