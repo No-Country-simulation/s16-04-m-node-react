@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from "@radix-ui/themes";
+import { Button, Flex } from "@radix-ui/themes";
 import "./css/hero.css";
 import '../../css/dashboard.css'
 import Logo from "../../assets/CHEALTH.png";
@@ -8,6 +8,8 @@ import { useState } from "react";
 import ServiciosHiro from "./components/ServiciosHiro";
 import Especialidades from "./components/Especialidades";
 import Blog from "./components/Blog";
+import { Link } from "react-router-dom";
+import ScrollToTopButton from "./ScrollToTopButton.jsx";
 
 
 const Hiro = () => {
@@ -31,7 +33,9 @@ const Hiro = () => {
           <section className="menuNav">
             <MenuNavHiro />
           </section>
+          <Link to="login">
           <Button>Portal Acceso</Button>
+          </Link >
         </div>
 
         <section className="bodyHero">
@@ -46,6 +50,7 @@ const Hiro = () => {
       <ServiciosHiro/>
       <Especialidades/>
       <Blog/>
+      <ScrollToTopButton/>
     </>
   );
 };

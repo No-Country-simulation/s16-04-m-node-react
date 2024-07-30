@@ -24,7 +24,7 @@ const Blog = () => {
 
   return (
     <>
-      <div className="containerBlog">
+      <div id='blog' className="containerBlog">
         <h1>Contenido para tu Bienestar</h1>
         <section className="listcardBlog">
           {dataBlog.map((item, index) => (

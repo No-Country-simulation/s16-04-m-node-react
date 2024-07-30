@@ -10,11 +10,14 @@ import Hero from "./views/Hero";
 import Paciente from "./views/Paciente/Paciente";
 import Historial from "./views/Historial/Historial";
 
+
+
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Hero />} >
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
           <Route path="/dashboard" element={<Dashboard />}>
