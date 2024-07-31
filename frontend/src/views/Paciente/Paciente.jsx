@@ -46,7 +46,7 @@ function Paciente() {
         <Link to="historial">
           <div
             style={{ cursor: "pointer", fontSize: "1.2rem" }}
-            onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
+          
           >
             <FaRegEye />
           </div>
@@ -57,22 +57,22 @@ function Paciente() {
 
   return (
     <div width="100%">
-      <Flex direction="column" align="start" width="100%">
-        <Box width="100%">
+      
+      
           <NavbarList/>
-        </Box>
-        <Box width="100%">
-          <Flex direction="row" align="start" width="100%">
-            <Box width="100%" className="pl-5">
+     
+      
+         
+         
               <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
                 <DataTable
                   columns={columns}
                   data={dataPacientes}
                 />
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
+           
+         
+       
+      
       </Flex>
     </div>
   );

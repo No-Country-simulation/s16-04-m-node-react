@@ -15,7 +15,7 @@ const NotificationList = ({ notifications, onClose }) => {
       ) : (
         notifications.map((notification, index) => (
           <div key={index} className="notificationItem">
-            <Text as="p">{notification.message}</Text>
+            <Text >{notification.message}</Text>
           </div>
         ))
       )}
