@@ -39,7 +39,9 @@ const Hiro = () => {
           <section className="menuNav">
             <MenuNavHiro isBurgerMenu={false} />
           </section>
+          <Link to='login'>
           <Button className="btnAcceso">Portal Acceso</Button>
+          </Link>
         </div>
         <section className="bodyHero">
           <p className="textHero">

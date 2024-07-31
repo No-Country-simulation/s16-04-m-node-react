@@ -72,6 +72,9 @@
   .menuEscritorio{
     display: none;
   }
+  .iconSliderMenu{
+    border-right: 4px solid white;
+  }
 
 @media (max-width: 768px) {
     .nav-dash{

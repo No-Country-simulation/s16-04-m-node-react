@@ -11,6 +11,7 @@ import { useState } from "react";
 const SliderMenu = () => {
 
   const [active, setActive] = useState(false)
+  const [menu, setMenu] = useState('home')
 
   const handleMenu = ()=>{
     setActive(!active)
@@ -32,6 +33,8 @@ const SliderMenu = () => {
       </div>
         <Link to='home'><Flex
         style={{ gap:'1rem', cursor:'pointer'}}
+        className={`${menu === 'home'?"iconSliderMenu":''}`}
+        onClick={()=>setMenu('home')}
         >
         <FiHome /> HOME
         </Flex>
@@ -39,6 +42,8 @@ const SliderMenu = () => {
         <Link to='calendario'>
          <Flex
         style={{ gap:'1rem', cursor:'pointer'}}
+        className={`${menu === 'calendario'?"iconSliderMenu":''}`}
+        onClick={()=>setMenu('calendario')}
         >
         <CiCalendar /> CALENDARIO
         </Flex>
@@ -47,6 +52,8 @@ const SliderMenu = () => {
         <Link to='paciente'>
          <Flex
         style={{ gap:'1rem', cursor:'pointer'}}
+        className={`${menu === 'paciente'?"iconSliderMenu":''}`}
+        onClick={()=>setMenu('paciente')}
         >
         <LuUsers /> PACIENTE
         </Flex>
