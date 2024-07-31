@@ -39,12 +39,9 @@ const Hiro = () => {
           <section className="menuNav">
             <MenuNavHiro isBurgerMenu={false} />
           </section>
-          <Box className="iconHero">
-            <CgDarkMode onClick={handletheme} />
-          </Box>
-          <Link to="login">
-            <Button className="btnPortal">Portal Acceso</Button>
-          </Link >
+          <Link to='login'>
+          <Button className="btnAcceso">Portal Acceso</Button>
+          </Link>
         </div>
         <section className="bodyHero">
           <p className="textHero">

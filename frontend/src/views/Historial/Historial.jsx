@@ -9,8 +9,8 @@ import "../../css/historial.css";
 const Historial = () => {
   return(
     <div className="containerHistorial">
-      <Flex direction="row" className="100%" style={{ flexWrap: "wrap" }}>
-        <Box position='relative' width="39%" height="100%" className="pt-3 pl-5 pr-2">
+      <div className='contentHitorial' >
+        <div className='box1'>
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column" width="100%">
               <Flex asChild gap="2">
@@ -116,8 +116,8 @@ const Historial = () => {
               </Box>
             </Flex>
           </Flex>
-        </Box>
-        <Box position='relative' width="61%" height="100%" className="pt-3 pl-2 pr-2">
+        </div>
+        <div className='box2'>
           <Flex align="end" direction="column" gap="1">
             <Flex direction="column" width="100%">
               <Box width="290px" height="48px" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
@@ -171,8 +171,8 @@ const Historial = () => {
               </Box>
             </Flex>
           </Flex>
-        </Box>
-      </Flex>
+        </div>
+      </div>
     </div>
   );
 };

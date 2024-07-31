@@ -10,3 +10,28 @@
   size: 20px;
   line-height: 24.09px;
 }
+.contentHitorial{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.box1{
+  width: 35%;
+}
+.box2{
+  width: 55%;
+}
+
+@media screen and (max-width:900px) {
+ .box1{
+  width: 100%;
+ }
+ .box2{
+  width: 100%;
+ }
+ .contentHitorial{
+  padding: 1rem;
+ }
+}
