@@ -22,21 +22,15 @@
     width: 7rem;
     height: 8rem;
 }
-
-.iconHero {
+.btnAcceso{
+    background: #1798ff;
+    padding: 1rem 2rem;
     cursor: pointer;
-    padding: 0.35rem;
-    border: 1px solid rgb(56, 105, 105);
-    background-color: rgb(56, 197, 197);
-    border-radius: 7px;
-    box-shadow: rgb(27, 28, 29) 1px 3px 8px;
 }
-.btnPortal{
-    cursor:pointer;
-    box-shadow: rgb(27, 28, 29) 1px 5px 8px;
+.btnAcceso:hover{
+    background: #0096c7;
 }
-
-.textHero {
+.textHero{
     width: 50%;
     padding: 2rem 5rem;
     color: white;

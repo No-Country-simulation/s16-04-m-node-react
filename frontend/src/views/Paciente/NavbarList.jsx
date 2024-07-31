@@ -1,5 +1,5 @@
 import { ArrowLeftIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import { Box, Flex, Text, TextField } from '@radix-ui/themes';
+import { Box, Flex, Text, TextField } from "@radix-ui/themes";
 import "../../css/paciente.css";
 
 const NavbarList = () => {

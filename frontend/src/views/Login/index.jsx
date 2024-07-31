@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Container,
   Card,
@@ -6,6 +7,7 @@ import {
   Button,
   Strong,
   Separator,
+  Link,
 } from "@radix-ui/themes";
 import Logo from "../../assets/CHEALTH.png";
 import "../../css/login.css";
@@ -13,8 +15,9 @@ import { FcGoogle } from "react-icons/fc";
 import { authenticateUser } from "../../utils/authUtils";
 import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useSignIn from "react-auth-kit/hooks/useSignIn";
+import { handleGoogleLogin } from "../../utils/GoogleAuth"; // Importa la función de autenticación con Google
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -23,6 +26,10 @@ const Login = () => {
 
   const onSubmit = (data) => {
     authenticateUser(data, signIn, navigate);
+  };
+
+  const onSubmitGoogle = () => {
+    handleGoogleLogin();
   };
 
   return (
@@ -74,9 +81,12 @@ const Login = () => {
                     <span className="mx-2 text-gray-500">O</span>
                     <Separator orientation="horizontal" size="4" />
                   </div>
-                  <button className="btn-google">
+                  <button className="btn-google" onClick={onSubmitGoogle}>
                     <FcGoogle /> Ingresar con Google
                   </button>
+                  <Text className="crearCuenta">
+                    ¿No tienes una cuenta? <Link href="/registro">Crear Cuenta</Link>
+                  </Text>
                 </Flex>
               </form>
             </Card>

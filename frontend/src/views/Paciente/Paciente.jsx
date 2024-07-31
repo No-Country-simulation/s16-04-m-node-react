@@ -46,7 +46,6 @@ function Paciente() {
         <Link to="historial">
           <div
             style={{ cursor: "pointer", fontSize: "1.2rem" }}
-            
           >
             <FaRegEye />
           </div>

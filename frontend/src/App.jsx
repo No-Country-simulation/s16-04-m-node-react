@@ -11,8 +11,8 @@ import Paciente from "./views/Paciente/Paciente";
 import Historial from "./views/Historial/Historial";
 import Profile from "./views/Profile";
 import Registro from "./views/Registro";
-
-
+import UserCitas from "./views/UserCitas";
+import HistorialCita from './views/HistorialCitas'
 
 function App() {
   return (
@@ -28,6 +28,8 @@ function App() {
             <Route path="/dashboard/profile" element={<Profile />} />
             <Route path="/dashboard/calendario" element={<Calendario />} />
             <Route path="/dashboard/paciente" element={<Paciente />} />
+            <Route path="/dashboard/citas" element={<UserCitas />} />
+            <Route path="/dashboard/tuscitas" element={<HistorialCita />} />
             <Route
               path="/dashboard/paciente/historial"
               element={<Historial />}
