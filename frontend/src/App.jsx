@@ -11,12 +11,15 @@ import Paciente from "./views/Paciente/Paciente";
 import Historial from "./views/Historial/Historial";
 import Profile from "./views/Profile";
 import Registro from "./views/Registro";
+import UserCitas from "./views/UserCitas";
+
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Hero />} >
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route element={<AuthOutlet fallbackPath="/login" />}>
@@ -25,6 +28,7 @@ function App() {
             <Route path="/dashboard/profile" element={<Profile />} />
             <Route path="/dashboard/calendario" element={<Calendario />} />
             <Route path="/dashboard/paciente" element={<Paciente />} />
+            <Route path="/dashboard/tuscitas" element={<UserCitas />} />
             <Route
               path="/dashboard/paciente/historial"
               element={<Historial />}

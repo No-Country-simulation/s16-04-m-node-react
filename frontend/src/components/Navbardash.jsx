@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Flex } from "@radix-ui/themes";
 import "../css/navbar.css";
 import * as Avatar from "@radix-ui/react-avatar";

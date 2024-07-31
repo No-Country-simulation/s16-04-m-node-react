@@ -1,4 +1,4 @@
-.containerHero{
+.containerHero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -9,14 +9,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.containerHero .headHero{
+
+.containerHero .headHero {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
 }
-.headHero img{
+
+.headHero img {
     width: 7rem;
     height: 8rem;
 }
@@ -36,10 +38,11 @@
 }
 
 @media screen and (max-width:900px) {
-    .menuNav{
+    .menuNav {
         display: none;
     }
-    .textHero{
+
+    .textHero {
         width: 100%;
     }
 }
