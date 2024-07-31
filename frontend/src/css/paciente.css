@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 @media screen and (max-width:900px) {
