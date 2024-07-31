@@ -9,8 +9,12 @@ import { LuMoon } from "react-icons/lu";
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../store/slice/appearanceSlice";
 import NotificationList from "./NotificationList";
+import useAuthUser from 'react-auth-kit/hooks/useAuthUser';
 
 const Navbardash = () => {
+
+  const auth = useAuthUser();
+  const [user, setUser] = useState(auth)
   const dispatch = useDispatch();
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifications, setNotifications] = useState([
@@ -52,11 +56,21 @@ const Navbardash = () => {
             )}
           </div>
           <Avatar.Root className="AvatarRoot">
-            <Avatar.Image
+            {user.rol === 'professional' &&
+             <Avatar.Image
               className="AvatarImage"
               src="https://wallpaper-house.com/data/out/9/wallpaper2you_298208.jpg"
               alt="Colm Tuite"
             />
+            }
+            {user.rol === 'patient' &&
+             <Avatar.Image
+              className="AvatarImage"
+              src="https://media.istockphoto.com/id/512735004/es/foto/retrato-de-una-joven-hermosa-mujer.webp?b=1&s=170667a&w=0&k=20&c=IAGGRsM9c8wy67FCAq5mcmnhp5DYL3S5_UBBVJ8A-jY="
+              alt="Colm Tuite"
+            />
+            }
+           
             <Avatar.Fallback className="AvatarFallback" delayMs={600}>
               CT
             </Avatar.Fallback>

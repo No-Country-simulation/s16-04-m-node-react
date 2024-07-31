@@ -4,6 +4,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { PiMapPinThin } from "react-icons/pi";
 import profile from "../../assets/profile.png";
 import "../../css/historial.css";
+import { Link } from 'react-router-dom';
 /*<Flex style={{flexWrap:'wrap', gap:'1rem'}}>*/
 
 const Historial = () => {
@@ -13,12 +14,15 @@ const Historial = () => {
         <div className='box1'>
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column" width="100%">
+              <Link to='/dashboard/home'>
               <Flex asChild gap="2">
-                <Text>
+              <Text>
                   <ArrowLeftIcon className="mt-1" />
                   Historia Clínica
                 </Text>
+                
               </Flex>
+              </Link>
               <Box width="100%" height="215px" className="mt-9 pt-3 border-solid border-2 border-gray rounded-l rounded-r">
                 <Flex direction="column">
                   <Box width="100%" height="35px" align="center">

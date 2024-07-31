@@ -11,7 +11,7 @@ export const authenticateUser = async (data, signIn, navigate) => {
     const response = await userLogin(data);
     const { token, user } = response;
 
-
+    
     if (signIn({
       auth: {
         token: token,
@@ -19,10 +19,16 @@ export const authenticateUser = async (data, signIn, navigate) => {
       },
       userState: {
         email: user.email,
+        rol: user.role
       },
     })) 
      
-    navigate('/dashboard');
+    if(user.role === 'professional'){
+
+      navigate('/dashboard/home');
+    }else{
+      navigate('/patientshome')
+    }
       
     
   } catch (error) {
