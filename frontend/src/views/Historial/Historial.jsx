@@ -3,12 +3,13 @@ import { ArrowLeftIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { FiPhoneCall } from "react-icons/fi";
 import { PiMapPinThin } from "react-icons/pi";
 import profile from "../../assets/profile.png";
+import "../../css/historial.css";
 /*<Flex style={{flexWrap:'wrap', gap:'1rem'}}>*/
 
 const Historial = () => {
   return(
-    <div>
-      <Flex direction="row" style={{ flexWrap: "wrap" }}>
+    <div className="containerHistorial">
+      <Flex direction="row" className="100%" style={{ flexWrap: "wrap" }}>
         <Box position='relative' width="39%" height="100%" className="pt-3 pl-5 pr-2">
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column" width="100%">
@@ -21,7 +22,7 @@ const Historial = () => {
               <Box width="100%" height="215px" className="mt-9 pt-3 border-solid border-2 border-gray rounded-l rounded-r">
                 <Flex direction="column">
                   <Box width="100%" height="35px" align="center">
-                    <Text>
+                    <Text className="title">
                       Juan Alberto Marquiz
                     </Text>
                   </Box>
@@ -57,11 +58,11 @@ const Historial = () => {
               </Box>
             </Flex>
             <Flex direction="column" width="100%">
-              <Box width="100%" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+              <Box width="100%" height="48px" className="mt-2 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ÚLTIMOS SIGNOS VITALES
               </Box>
-              <Box width="100%" height="438px" className="mt-3 border-solid border-2 border-gray rounded-l rounded-r">
-                <Flex direction="column" className="pl-5 pt-5">
+              <Box width="100%" className="mt-3 pt-5 pr-5 pl-5 pb-5 border-solid border-2 border-gray rounded-l rounded-r">
+                <Flex direction="column">
                   <Box>
                     <Flex direction="row">
                       <Text className="pr-20">Altura</Text>
@@ -119,16 +120,16 @@ const Historial = () => {
         <Box position='relative' width="61%" height="100%" className="pt-3 pl-2 pr-2">
           <Flex align="end" direction="column" gap="1">
             <Flex direction="column" width="100%">
-              <Box width="290px" height="48px" className="bg-violet-500 text-white rounded-l rounded-r">
+              <Box width="290px" height="48px" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
                 INICIAR NUEVA CONSULTA
               </Box>
-              <Box width="100%" height="48px" className="mt-3 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+              <Box width="100%" height="48px" className="mt-3 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ALERGIAS
               </Box>
-              <Box width="100%" height="240px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column" className="pl-20 pt-5">
+              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column" className="pt-5 pr-5 pl-20 pb-5">
                   <Box>
-                    <Text>Alergias a medicamentos:</Text>
+                    <Text className="title">Alergias a medicamentos:</Text>
                   </Box>
                   <Box className="pt-2">
                     <Text>Aspirina y otros antiinflamatorios no esteroideos (AINEs):</Text>
@@ -137,7 +138,7 @@ const Historial = () => {
                     <Text>Síntomas: Asma inducida por aspirina, urticaria, angioedema.</Text>
                   </Box>
                   <Box className="pt-2">
-                    <Text>Otras alergias:</Text>
+                    <Text className="title">Otras alergias:</Text>
                   </Box>
                   <Box className="pt-2">
                     <Text>Medicación actual:</Text>
@@ -149,11 +150,11 @@ const Historial = () => {
               </Box>
             </Flex>
             <Flex direction="column" width="100%">
-              <Box width="100%" height="48px" className="mt-2 pt-5 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
+              <Box width="100%" height="48px" className="mt-2 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ANTECEDENTES PATOLOGICOS
               </Box>
-              <Box width="100%" height="332px" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column" className="pl-6 pt-3">
+              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column" className="pt-3 pr-5 pb-3 pl-6 ">
                   <Text>Hipertensión arterial:</Text>
                   <Text>Diagnóstico: 2010</Text>
                   <Text>Tratamiento actual: Losartán 50 mg diarios, Hidroclorotiazida 25 mg diarios</Text>
