@@ -4,7 +4,8 @@ import ImagenDocs from "../../assets/vector_docs.png";
 import { NavPatientsHome } from "./NavPatientsHome.jsx";
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import Logo from "../../assets/CHEALTH.png";
-import "./css/PatientsHome.css"
+import "./css/PatientsHome.css";
+import { Link } from 'react-router-dom';
 
 export const PatientsHome = () => {
     return (
@@ -21,20 +22,22 @@ export const PatientsHome = () => {
                     </div>
                 </Flex>
                 <Flex justify={'center'} align={'center'} gapX={'4'} className='inputs'>
-                    <div className="flex border-0
-                     outline-none align-middle text-center p-1" >
-                        <input className="outline-none rounded-lg py-2 px-10 pt text-center shadow-md shadow-slate-800"
-                            type="select" name="select" id="select_especialidades" placeholder=" Especialidad" />
+                    <div className="flex border-0 outline-none align-middle text-center p-1">
+                        <select className="outline-none rounded-lg py-2 px-10 text-center shadow-md shadow-slate-800"
+                            id="select_especialidades">
+                            <option value="" disabled selected>Especialidad</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="medicina_general">Medicina General</option>
+                            <option value="neurologia">Neurología</option>
+                            <option value="pediatria">Pediatría</option>
+                        </select>
                     </div>
-                    <div className="flex border-0
-                     outline-none align-middle text-center p-1" >
-                        <input className="outline-none rounded-lg py-2 px-10 text-center shadow-md shadow-slate-800"
-                            type="select" name="select" id="select_profesionales" placeholder=" Nombre del profesional"
-                        />
-                    </div>
-                    <Button variant='classic' className='btn text-center bg-cyan-500 align-middle rounded-md shadow-md shadow-slate-800'>
+                    <Link to='/dashboard/citas'>
+                     <Button variant='classic' className='btn text-center bg-cyan-500 align-middle rounded-md shadow-md shadow-slate-800'>
                         <MagnifyingGlassIcon /> Buscar
                     </Button>
+                    </Link>
+                   
                 </Flex>
                 <Flex justify={"center"} align={"start"} className='cards'>
                     <Flex direction={'column'} align={'start'} justify={'center'} className="grp-cards bg-opacity-20 text-left bg-cyan-800">
@@ -55,5 +58,5 @@ export const PatientsHome = () => {
                 </Flex>
             </Container>
         </div>
-    )
-}
+    );
+};
