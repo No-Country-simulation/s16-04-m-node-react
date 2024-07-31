@@ -1,0 +1,21 @@
+.containeruserCitas{
+    width: 100%;
+    min-height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.filteruserCitas{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.listtuscitas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

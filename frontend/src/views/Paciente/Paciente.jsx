@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/useAppselector.js";
 import { useEffect } from "react";
 import { listpacientes } from "../../store/slice/pacienteSlice.js";
 import { FaRegEye } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import "../../css/paciente.css";
 
 function Paciente() {
@@ -46,7 +46,6 @@ function Paciente() {
         <Link to="historial">
           <div
             style={{ cursor: "pointer", fontSize: "1.2rem" }}
-            onClick={() => handleExpedienteClick(row.id)} // Maneja el evento click
           >
             <FaRegEye />
           </div>
@@ -56,23 +55,15 @@ function Paciente() {
   ];
 
   return (
-    <div width="100%">
-      <Flex direction="column" align="start" width="100%">
-        <Box width="100%">
-          <NavbarList/>
-        </Box>
-        <Box width="100%">
-          <Flex direction="row" align="start" width="100%">
-            <Box width="100%" className="pl-5">
-              <Flex align="start" direction="row" gap="1" className="pt-2" width="100%">
-                <DataTable
-                  columns={columns}
-                  data={dataPacientes}
-                />
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
+    <div className="containerPaciente">
+      <Flex direction="column" gap="1rem" width="100%">
+        <NavbarList/>
+        
+        <DataTable
+          columns={columns}
+          data={dataPacientes}
+          className="tablePaciente"
+        />
       </Flex>
     </div>
   );
