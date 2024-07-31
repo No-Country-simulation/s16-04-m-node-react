@@ -9,7 +9,7 @@ import "../../css/historial.css";
 const Historial = () => {
   return(
     <div className="containerHistorial">
-      <Flex direction="row" className="100%" style={{ flexWrap: "wrap" }}>
+      <div style={{ flexWrap: "wrap", display: "flex" }}>
         <Box position='relative' width="39%" height="100%" className="pt-3 pl-5 pr-2">
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column" width="100%">
@@ -64,52 +64,52 @@ const Historial = () => {
               <Box width="100%" className="mt-3 pt-5 pr-5 pl-5 pb-5 border-solid border-2 border-gray rounded-l rounded-r">
                 <Flex direction="column">
                   <Box>
-                    <Flex direction="row">
-                      <Text className="pr-20">Altura</Text>
-                      <Text className="pl-20 pr-20">1.56</Text>
-                      <Text className="pl-10">Mts</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Altura</Text>
+                      <Text>1.56</Text>
+                      <Text>Mts</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-20">Peso</Text>
-                      <Text className="pl-20 pr-20"></Text>
-                      <Text className="pl-10">Kg</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Peso</Text>
+                      <Text></Text>
+                      <Text>Kg</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-10">Masa corporal</Text>
-                      <Text className="pl-20 pr-20"></Text>
-                      <Text className="pl-10">imc</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Masa corporal</Text>
+                      <Text></Text>
+                      <Text>imc</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-20">Temperatura</Text>
-                      <Text className="pl-20 pr-20"></Text>
-                      <Text className="pl-10">C</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Temperatura</Text>
+                      <Text></Text>
+                      <Text>C</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-8">Frecuencia respiratoria</Text>
-                      <Text className="pl-2 pr-10"></Text>
-                      <Text className="pl-20">r/m</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Frecuencia respiratoria</Text>
+                      <Text></Text>
+                      <Text>r/m</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-20">Presión arterial</Text>
-                      <Text className="pl-4 pr-10"></Text>
-                      <Text className="pl-20">mmHg</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Presión arterial</Text>
+                      <Text></Text>
+                      <Text>mmHg</Text>
                     </Flex>
                   </Box>
                   <Box className="pt-2">
-                    <Flex direction="row">
-                      <Text className="pr-10">Frecuencia cardiaca</Text>
-                      <Text className="pl-6 pr-10"></Text>
-                      <Text className="pl-20">l/m</Text>
+                    <Flex direction="row" align="center" justify="center" className="signo-vital">
+                      <Text>Frecuencia cardiaca</Text>
+                      <Text></Text>
+                      <Text>l/m</Text>
                     </Flex>
                   </Box>
                 </Flex>
@@ -120,14 +120,14 @@ const Historial = () => {
         <Box position='relative' width="61%" height="100%" className="pt-3 pl-2 pr-2">
           <Flex align="end" direction="column" gap="1">
             <Flex direction="column" width="100%">
-              <Box width="290px" height="48px" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
+              <Box width="290px" height="48px" align="center" className="pt-3 pb-3 bg-violet-500 text-white rounded-l rounded-r">
                 INICIAR NUEVA CONSULTA
               </Box>
               <Box width="100%" height="48px" className="mt-3 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ALERGIAS
               </Box>
-              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column" className="pt-5 pr-5 pl-20 pb-5">
+              <Box width="100%" className="mt-3 pt-5 pr-5 pl-20 pb-5 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column">
                   <Box>
                     <Text className="title">Alergias a medicamentos:</Text>
                   </Box>
@@ -153,8 +153,8 @@ const Historial = () => {
               <Box width="100%" height="48px" className="mt-2 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ANTECEDENTES PATOLOGICOS
               </Box>
-              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column" className="pt-3 pr-5 pb-3 pl-6 ">
+              <Box width="100%" className="mt-3 pt-3 pr-5 pb-3 pl-6 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column">
                   <Text>Hipertensión arterial:</Text>
                   <Text>Diagnóstico: 2010</Text>
                   <Text>Tratamiento actual: Losartán 50 mg diarios, Hidroclorotiazida 25 mg diarios</Text>
@@ -172,7 +172,7 @@ const Historial = () => {
             </Flex>
           </Flex>
         </Box>
-      </Flex>
+      </div>
     </div>
   );
 };

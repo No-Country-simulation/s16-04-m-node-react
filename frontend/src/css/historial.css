@@ -4,9 +4,15 @@
   font-family: 'Chakra Petch', sans-serif;
   justify-content: center;
 }
-
 .title {
   font-weight: 700px;
   size: 20px;
   line-height: 24.09px;
+}
+
+@media screen {
+  .signo-vital {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
