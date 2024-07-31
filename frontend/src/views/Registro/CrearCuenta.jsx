@@ -3,6 +3,8 @@ import {Text, Flex , Checkbox} from '@radix-ui/themes';
 
 
 const CrearCuenta = () => {
+
+
     return (
     <div className="flex flex-col mb-2">
         <div className="mt-4 flex flex-col bg-gray-100 rounded-lg p-4 shadow-sm">

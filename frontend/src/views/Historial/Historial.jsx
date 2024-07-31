@@ -9,8 +9,8 @@ import "../../css/historial.css";
 const Historial = () => {
   return(
     <div className="containerHistorial">
-      <div style={{ flexWrap: "wrap", display: "flex" }}>
-        <Box position='relative' width="39%" height="100%" className="pt-3 pl-5 pr-2">
+      <div className='contentHitorial' >
+        <div className='box1'>
           <Flex align="start" direction="column" gap="1">
             <Flex direction="column" width="100%">
               <Flex asChild gap="2">
@@ -116,18 +116,18 @@ const Historial = () => {
               </Box>
             </Flex>
           </Flex>
-        </Box>
-        <Box position='relative' width="61%" height="100%" className="pt-3 pl-2 pr-2">
+        </div>
+        <div className='box2'>
           <Flex align="end" direction="column" gap="1">
             <Flex direction="column" width="100%">
-              <Box width="290px" height="48px" align="center" className="pt-3 pb-3 bg-violet-500 text-white rounded-l rounded-r">
+              <Box width="290px" height="48px" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
                 INICIAR NUEVA CONSULTA
               </Box>
               <Box width="100%" height="48px" className="mt-3 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ALERGIAS
               </Box>
-              <Box width="100%" className="mt-3 pt-5 pr-5 pl-20 pb-5 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column">
+              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column" className="pt-5 pr-5 pl-20 pb-5">
                   <Box>
                     <Text className="title">Alergias a medicamentos:</Text>
                   </Box>
@@ -153,8 +153,8 @@ const Historial = () => {
               <Box width="100%" height="48px" className="mt-2 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ANTECEDENTES PATOLOGICOS
               </Box>
-              <Box width="100%" className="mt-3 pt-3 pr-5 pb-3 pl-6 border-solid border-2 border-black rounded-l rounded-r">
-                <Flex direction="column">
+              <Box width="100%" className="mt-3 border-solid border-2 border-black rounded-l rounded-r">
+                <Flex direction="column" className="pt-3 pr-5 pb-3 pl-6 ">
                   <Text>Hipertensión arterial:</Text>
                   <Text>Diagnóstico: 2010</Text>
                   <Text>Tratamiento actual: Losartán 50 mg diarios, Hidroclorotiazida 25 mg diarios</Text>
@@ -171,7 +171,7 @@ const Historial = () => {
               </Box>
             </Flex>
           </Flex>
-        </Box>
+        </div>
       </div>
     </div>
   );
