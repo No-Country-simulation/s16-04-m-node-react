@@ -43,7 +43,6 @@ const Hiro = () => {
             <CgDarkMode onClick={handletheme} />
           </Box>
           <Link to="login">
-          <Button>Portal Acceso</Button>
             <Button className="btnPortal">Portal Acceso</Button>
           </Link >
         </div>
