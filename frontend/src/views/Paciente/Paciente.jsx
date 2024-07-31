@@ -1,4 +1,4 @@
-import { Flex } from "@radix-ui/themes";
+import { Flex, Box } from "@radix-ui/themes";
 import NavbarList from "./NavbarList.jsx";
 import DataTable from "react-data-table-component";
 import { useAppDispatch, useAppSelector } from "../../hooks/useAppselector.js";
