@@ -51,6 +51,13 @@ const SliderMenu = () => {
         <LuUsers /> PACIENTE
         </Flex>
         </Link>
+        <Link to='tuscitas'>
+         <Flex
+        style={{ gap:'1rem', cursor:'pointer'}}
+        >
+        <LuUsers /> TUS CITAS
+        </Flex>
+        </Link>
        
       </Flex>
     </>
