@@ -6,6 +6,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import "../css/TablaEventos.css"
 import Reprogramar from '../views/Home/Reprogramar';
 import ConfirmPaciente from '../views/Home/ConfirmPaciente';
+import { Link } from 'react-router-dom';
 
 
 
@@ -116,9 +117,12 @@ function TablaEventos({dataCita}) {
                 <Reprogramar className='bg-red-500 btn-grp editCita' radius="full" />
               </Tooltip>
               <Tooltip className='bg-cyan-500' content="Historia Clinica">
+                <Link to='/dashboard/paciente/historial'>
                 <IconButton className='bg-violet-500 btn-grp' radius="full">
                   <IoEyeOutline />
                 </IconButton>
+                </Link>
+                
               </Tooltip>
             </div>
         },
