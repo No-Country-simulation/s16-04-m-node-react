@@ -1,13 +1,17 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { Flex, Container } from '@radix-ui/themes';
 import "./css/NavPatientsHome.css"
+import Logo from "../../assets/CHEALTH.png";
 
 export const NavPatientsHome = () => {
     return (
         <div>
-            <Container position={'absolute'} justify={'between'} style={{ width: "100%" }}>
-                <Flex justify={'center'} className='navpatientshome'>
-                    <NavigationMenu.Root className="relative z-[1] flex flex-wrap 
+            <Container justify={'center'}>
+                <Flex className='navpatientshome'>
+                    <div className='navpatientshome-logo'>
+                        <img src={Logo} alt="logo_app_CHealth" />
+                    </div>
+                    <NavigationMenu.Root className="flex flex-wrap 
                     flex-1 justify-center align-middle items-center">
                         <NavigationMenu.List className="flex flex-wrap m-5 list-none 
                          p-1 navpatientshome-list">

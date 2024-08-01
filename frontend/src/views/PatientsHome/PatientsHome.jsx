@@ -3,7 +3,7 @@ import { Flex, Button, Text, Container } from '@radix-ui/themes';
 import ImagenDocs from "../../assets/vector_docs.png";
 import { NavPatientsHome } from "./NavPatientsHome.jsx";
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import Logo from "../../assets/CHEALTH.png";
+
 import "./css/PatientsHome.css";
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,7 @@ export const PatientsHome = () => {
         <div>
             <Container maxWidth={'100vw'} height={'100vh'}
              className="bg-cyan-400 flex flex-wrap patientshome-contenedor">
-                <NavPatientsHome />
-                <img src={Logo} alt="logo_app_CHealth" width={'70px'} className='z-10 absolute top-4 left-10 patientshome-logo' />
+                <NavPatientsHome />                
                 <Flex direction={"row"} width={'100vw'} justify={'center'} align={'center'} className='flex-wrap patientshome'>
                     <Text className='text-white frase font-medium text-wrap text-left float-start'>
                         Encuentra tu especialista y pide cita.

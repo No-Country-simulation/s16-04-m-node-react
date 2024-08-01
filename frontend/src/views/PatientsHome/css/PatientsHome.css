@@ -1,6 +1,10 @@
+.patientshome-contenedor{
+    height: 100vh;
+}
+
 .patientshome {
     gap: 3rem;
-    padding: 4rem;
+    padding: 4rem 2rem 1rem 2rem;
 }
 
 .frase {
@@ -21,6 +25,9 @@
     flex-direction: row;
     gap: 4rem;
 }
+.inputs:last-child{
+    text-align:center;
+}
 
 .cardsPH {
     gap: 3rem;
@@ -33,21 +40,23 @@
 }
 
 .grp-cards h2 {
-    line-height: 1.75rem;
-    font-size: 1.35rem;
-    padding: 1rem;
+    line-height: 1rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
 }
 
 .grpcards-p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 0.9rem;
     padding: 1rem;
     text-align: center;
 }
 
 @media screen and (max-width:1024px) {
+    
     .patientshome {
         gap: 2rem;
-        padding: 4rem;
+        padding: 3rem;
     }
 
     .patientshome_img {
@@ -57,12 +66,16 @@
     .frase {
         font-size: 2.2rem;
         line-height: 2rem;
-        gap: 1rem;
+        gap: 0.25rem;
     }
 
     .inputs {
         gap: 5rem;
         padding: 0.5rem;
+    }
+
+    .inputs:nth-child(3){
+        text-align:center;
     }
 
     .cardsPH {
@@ -72,15 +85,15 @@
     .grp-cards {
         flex-direction: column;
         width: 30%;
-        padding: .5rem;
+        padding: 0.5rem;
     }
 
     .grp-cards h2 {
         font-size: 1rem;
         line-height: 1rem;
-        font-weight: 600;
+        font-weight: 500;
         margin: 0;
-        padding-top: 0.25rem;
+        padding: 0.25rem;
     }
 
     .grpcards-p {
@@ -93,12 +106,7 @@
 @media screen and (max-width:768px) {
     .patientshome {
         gap: 1rem;
-        padding: 3.5rem 2rem 0.5rem 2rem;
-    }
-
-    .patientshome-logo {
-        width: 3.25rem;
-        left: 0.5rem;
+        padding: 1rem 2rem 0.5rem 2rem;
     }
 
     .frase {
@@ -112,7 +120,7 @@
     }
 
     .cardsPH {
-        padding: 3rem;
+        padding: 2rem;
         gap: 1rem;
         justify-content: center;
     }
@@ -126,7 +134,7 @@
     .grp-cards h2 {
         font-size: 0.9rem;
         line-height: 1rem;
-        font-weight: 600;
+        font-weight: 500;
         padding: 0.25rem;
     }
 
@@ -140,14 +148,13 @@
 @media screen and (max-width: 425px) {
     .patientshome {
         gap: 1rem;
-        padding: 3.5rem 2rem 0.5rem 2rem;
+        padding: 0.5rem 2rem 0.5rem 2rem;
     }
 
     .frase {
-        margin-top: 2rem;
-        padding: 28px 12px;
         font-size: 1.65rem;
         line-height: 2rem;
+        padding:0.8rem;
     }
 
     .patientshome_img {
@@ -183,29 +190,24 @@
 }
 
 @media screen and (max-width: 375px) {
-    .patientshome-logo {
-        width: 3.5rem;
-    }
-
     .patientshome {
         gap: 1rem;
-        padding: 3.5rem 2rem 0.5rem 2rem;
+        padding: 0.5rem 2rem;
     }
 
     .frase {
         font-size: 1.5rem;
         line-height: 2rem;
-        padding: .5rem;
+        padding: 0.25rem;
     }
 
     .inputs {
         flex-direction: column;
         gap: 0.5rem;
-        padding: .5rem;
     }
 
     .cardsPH {
-        gap: .5rem;
+        gap: .25rem;
     }
 
     .grp-cards {
@@ -221,69 +223,64 @@
     }
 
     .grpcards-p {
-        line-height: 1rem;
+        line-height: .9em;
         font-size: 0.8rem;
     }
 
     .patientshome_img {
-        width: 120px;
-        padding-top: 1px;
+        width: 10rem;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .patientshome-logo {
-        width: 3.5rem;
-        gap: 1rem;
-    }
-
     .patientshome {
         flex-direction: column;
-        padding: 2.5rem;
-        gap: 0;
-        margin-top: 3.5rem;
+        padding: 1rem;
+        gap: 0.25rem;
     }
 
     .frase {
-        font-size: 1.4rem;
-        line-height: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
         font-weight:500;
         padding: 0;
-        gap: 0;
     }
 
     .patientshome_img {
-        width: 6.5rem;
+        width: 9rem;
+        padding:0;
     }
 
     .inputs {
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
-        padding: 1rem;
     }
 
     .cardsPH {
-        gap: .25rem;
+        gap: .2rem;
         align-items: flex-start;
     }
 
     .grp-cards {
         border-radius: 5px;
+        padding:0.2rem;
         width: auto;
     }
 
     .grp-cards h2 {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         line-height: 0.8rem;
-        font-weight: 600;
+        font-weight: 500;
         margin: 0;
-        padding: 0;
+        padding: 0.2rem;
     }
 
     .grpcards-p {
-        font-size: 0.725rem;
-        line-height: 0.8rem;
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 0.85rem;
+        padding:0.3rem;
         text-align: center;
     }
 }

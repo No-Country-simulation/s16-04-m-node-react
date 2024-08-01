@@ -1,33 +1,52 @@
-.navpatientshome-link{
-    font-size: 1rem;
-    line-height: 1.5rem;
+
+.navpatientshome{
+    flex-flow: row wrap;
+    width: 100%;
 }
 
-
+.navpatientshome-logo img{
+    width:4rem;
+}
+.navpatientshome-link{
+    font-size: 1rem;
+    line-height: 1rem;
+}
 
 
 @media screen and (max-width: 425px){
     .navpatientshome {
-        float:inline-end;
-        flex-flow: row wrap;
-        width:75%;
+        align-items: center;
+        gap: 3rem;
+        width:100%;
+        text-align: left;
     }
-    .navpatientshome-list {
-        margin: 10px;
+    .navpatientshome-logo{
+        padding:0.5rem;
     }
+    
     .navpatientshome-link{
         font-size: 1rem;
         line-height: 1rem;
     }
 }
-@media screen and (max-width:320px){
-   
-    .navpatientshome-list {
-        margin: 5px;
-        padding: 2px 0 0 4px;
+@media screen and (max-width: 375px){
+    .navpatientshome {
+        align-items: center;
+        gap: .5rem;
+        width:100%;
+        text-align: left;
     }
     .navpatientshome-link{
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+    }
+}
+@media screen and (max-width:320px){
+    .navpatientshome {
+        gap: 0;
+    }
+    .navpatientshome-link{
+        font-size: 0.75rem;
+        line-height: 0.7rem;
     }
 }
