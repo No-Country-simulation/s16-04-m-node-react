@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@radix-ui/themes';
 import { ArrowLeftIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { FiPhoneCall } from "react-icons/fi";
-import { PiMapPinThin } from "react-icons/pi";
+import { PiMapPin } from "react-icons/pi";
 import profile from "../../assets/profile.png";
 import "../../css/historial.css";
 /*<Flex style={{flexWrap:'wrap', gap:'1rem'}}>*/
@@ -46,7 +46,7 @@ const Historial = () => {
                         </Flex>
                         <Flex asChild gap="2" className='pt-2'>
                           <Text>
-                            <PiMapPinThin className="mt-1"/>
+                            <PiMapPin className="mt-1"/>
                             Aven 93 # 56 -34
                             New York
                           </Text>
@@ -61,57 +61,35 @@ const Historial = () => {
               <Box width="100%" height="48px" className="mt-2 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
                 ÚLTIMOS SIGNOS VITALES
               </Box>
-              <Box width="100%" className="mt-3 pt-5 pr-5 pl-5 pb-5 border-solid border-2 border-gray rounded-l rounded-r">
-                <Flex direction="column">
-                  <Box>
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Altura</Text>
-                      <Text>1.56</Text>
-                      <Text>Mts</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Peso</Text>
-                      <Text></Text>
-                      <Text>Kg</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Masa corporal</Text>
-                      <Text></Text>
-                      <Text>imc</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Temperatura</Text>
-                      <Text></Text>
-                      <Text>C</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Frecuencia respiratoria</Text>
-                      <Text></Text>
-                      <Text>r/m</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Presión arterial</Text>
-                      <Text></Text>
-                      <Text>mmHg</Text>
-                    </Flex>
-                  </Box>
-                  <Box className="pt-2">
-                    <Flex direction="row" align="center" justify="center" className="signo-vital">
-                      <Text>Frecuencia cardiaca</Text>
-                      <Text></Text>
-                      <Text>l/m</Text>
-                    </Flex>
-                  </Box>
+              <Box width="100%" className="mt-3 pt-3 pr-4 pl-4 pb-3 border-solid border-2 border-gray rounded-l rounded-r">
+                <Flex direction="row" className="vital-sign">
+                  <Flex direction="column" width="102px">
+                    <Box height="48px" className="pt-3 pb-4"><Text>Altura</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>Peso</Text></Box>
+                    <Box height="48px"><Text>Masa corporal</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>Temperatura</Text></Box>
+                    <Box height="48px"><Text>Frecuencia respiratoria</Text></Box>
+                    <Box height="48px"><Text>Presión arterial</Text></Box>
+                    <Box height="48px"><Text>Frecuencia cardiaca</Text></Box>
+                  </Flex>
+                  <Flex direction="column">
+                    <Box height="48px" className="pt-3 pb-4"><Text>1.56</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text></Text></Box>
+                  </Flex>
+                  <Flex direction="column">
+                    <Box height="48px" className="pt-3 pb-4"><Text>Mts</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>Kg</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>imc</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>C</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>r/m</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>mmHg</Text></Box>
+                    <Box height="48px" className="pt-3 pb-4"><Text>l/m</Text></Box>
+                  </Flex>
                 </Flex>
               </Box>
             </Flex>
@@ -119,8 +97,8 @@ const Historial = () => {
         </div>
         <div className='box2'>
           <Flex align="end" direction="column" gap="1">
-            <Flex direction="column" width="100%">
-              <Box width="290px" height="48px" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
+            <Flex align="end" direction="column" width="100%">
+              <Box width="290px" height="48px" align="center" className="pt-3 pr-3 pb-3 pl-3 bg-violet-500 text-white rounded-l rounded-r">
                 INICIAR NUEVA CONSULTA
               </Box>
               <Box width="100%" height="48px" className="mt-3 pt-3 pr-3 pb-3 pl-3 border-solid border-2 border-black rounded-l rounded-r bg-blue-200">
