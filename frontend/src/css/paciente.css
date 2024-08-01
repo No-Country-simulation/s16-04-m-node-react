@@ -1,0 +1,20 @@
+.containerPaciente{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.headPacientelist{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+@media screen and (max-width:900px) {
+    .headPacientelist{
+        justify-content: center;
+        gap: 2rem;
+    }
+}

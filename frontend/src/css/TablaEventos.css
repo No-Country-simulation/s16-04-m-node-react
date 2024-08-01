@@ -1,0 +1,35 @@
+.editCita{
+  
+    background: white;
+}
+
+
+@media screen and (max-width: 900px) {
+   
+ 
+    .tarjeta {
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+   
+    
+    .tblMediaQ {
+        display: flex;
+    }
+    .rowsMediaQ {
+        height:auto;
+        font-size: 0.9rem;
+    }
+    .cellsMediaQ {
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+    .btn-grp {
+        width: 23px;
+        height: 23px;
+    }
+}

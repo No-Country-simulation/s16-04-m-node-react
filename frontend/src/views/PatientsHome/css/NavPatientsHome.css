@@ -1,0 +1,52 @@
+
+.navpatientshome{
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.navpatientshome-logo img{
+    width:4rem;
+}
+.navpatientshome-link{
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+
+@media screen and (max-width: 425px){
+    .navpatientshome {
+        align-items: center;
+        gap: 3rem;
+        width:100%;
+        text-align: left;
+    }
+    .navpatientshome-logo{
+        padding:0.5rem;
+    }
+    
+    .navpatientshome-link{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
+@media screen and (max-width: 375px){
+    .navpatientshome {
+        align-items: center;
+        gap: .5rem;
+        width:100%;
+        text-align: left;
+    }
+    .navpatientshome-link{
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+    }
+}
+@media screen and (max-width:320px){
+    .navpatientshome {
+        gap: 0;
+    }
+    .navpatientshome-link{
+        font-size: 0.75rem;
+        line-height: 0.7rem;
+    }
+}

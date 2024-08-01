@@ -1,0 +1,42 @@
+.containerHistorial{
+  width: 100%;
+  display: flex;
+  font-family: 'Chakra Petch', sans-serif;
+  justify-content: center;
+}
+.title {
+  font-weight: 700px;
+  size: 20px;
+  line-height: 24.09px;
+}
+.contentHitorial{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.box1{
+  width: 35%;
+}
+.box2{
+  width: 55%;
+}
+.vital-sign{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width:900px) {
+ .box1{
+  width: 100%;
+ }
+ .box2{
+  width: 100%;
+ }
+ .contentHitorial{
+  padding: 1rem;
+ }
+}
