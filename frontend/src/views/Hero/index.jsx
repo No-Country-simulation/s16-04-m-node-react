@@ -32,14 +32,11 @@ const Hiro = () => {
             <MenuNavHiro isBurgerMenu={true} />
           </Menu>
         </div>
-
-
         <div className="headHero">
           <img src={Logo} alt="logo" />
           <section className="menuNav">
             <MenuNavHiro isBurgerMenu={false} />
           </section>
-
           <Box className="iconHero">
             <CgDarkMode onClick={handletheme} />
           </Box>
